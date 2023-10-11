@@ -1,10 +1,14 @@
 # Programación Orientada a Objetos
 
+Esta asignatura aporta al perfil del Ingeniero la capacidad de analizar, desarrollar, implementar y administrar software de aplicación orientado a objetos, cumpliendo con estándares de calidad, con el fin de apoyar la productividad y competitividad de las organizaciones. 
+
 ## Plan de trabajo
 
 Los detalles de la materia así como el plan de trabajo pueden ser consultados en el siguiente [documento](https://www.delicias.tecnm.mx/doc/Oferta_Educativa/Sistemas/2Semestre/ProgramacionOrientadaaObjetos.pdf).
 
 ## Unidad 1: Introducción al paradigma de la programación orientada a objetos
+
+En esta unidad se presentan los conceptos de la programación orientada a objetos, teniendo la intención de introducir al estudiante en los elementos del modelo de objetos, así como el uso básico del lenguaje de modelado unificado. 
 
 ### 1.1 Elementos del modelo de objetos: clases, objetos, abstracción, modularidad, encapsulamiento, herencia y polimorfismo.
 
@@ -15,6 +19,8 @@ Tema por desarrollar
 Tema por desarrollar
 
 ## Unidad 2: Clases y objetos
+
+Esta unidad se centra en la definición e implementación de clases y objetos permitiendo al estudiante adquirir las competencias fundamentales de la programación orientada a objetos. 
 
 ### 2.1 Declaración de clases: atributos, métodos, encapsulamiento
 
@@ -46,6 +52,8 @@ Tema por desarrollar
 
 ## Unidad 3: Herencia
 
+Esta unidad tiene como propósito la creación de objetos que incorporen propiedades y métodos de otros objetos, construyéndolos a partir de éstos sin necesidad de reescribirlo todo. 
+
 ### 3.1 Definición: clase base, clase derivada
 
 Tema por desarrollar
@@ -70,6 +78,8 @@ Tema por desarrollar
 
 ## Unidad 4: Polimorfismo
 
+Esta unidad trata una de las características fundamentales de la programación orientada a objetos: el polimorfismo, que permite reutilizar métodos con el mismo nombre, pero con relación a la clase a la que pertenece cada uno, con comportamientos diferentes. 
+
 ### 4.1 Definición
 
 Tema por desarrollar
@@ -92,6 +102,8 @@ Tema por desarrollar
 
 ## Unidad 5: Excepciones
 
+En esta unidad se tratan situaciones excepcionales que se presentan en tiempo de ejecución. 
+
 ### 5.1 Definición
 
 Tema por desarrollar
@@ -113,6 +125,8 @@ Tema por desarrollar
 Tema por desarrollar
 
 ## Unidad 6: Flujos y archivos
+
+En esta unidad se aplican las operaciones necesarias para el manejo de archivos de texto y binarios, temas que se utilizarán en materias posteriores.
 
 ### 6.1 Definición
 
