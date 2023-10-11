@@ -37,7 +37,12 @@ El **polimorfismo** es una propiedad que permite a los objetos interactuar de di
 
 ### 1.2 Lenguaje de modelado unificado: diagrama de clases
 
-Tema por desarrollar
+Un diagrama de clases muestra un conjunto de clases, interfaces y colaboraciones, así como sus relaciones. Gráficamente, un diagrama de clases es una colección de nodos y arcos.
+
+Los diagramas de clases se utilizan para modelar la vista de diseño estática de un sistema. Esto incluye, principalmente, modelar el vocabulario del sistema, modelar las colaboraciones o modelar los esquemas.
+
+
+
 
 ## Unidad 2: Clases y objetos
 
