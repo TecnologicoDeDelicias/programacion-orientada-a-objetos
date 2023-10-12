@@ -1,6 +1,6 @@
 # Programación Orientada a Objetos
 
-Esta asignatura aporta al perfil del Ingeniero la capacidad de analizar, desarrollar, implementar y administrar software de aplicación orientado a objetos, cumpliendo con estándares de calidad, con el fin de apoyar la productividad y competitividad de las organizaciones. 
+Esta asignatura aporta al perfil del Ingeniero la capacidad de analizar, desarrollar, implementar y administrar software de aplicación orientado a objetos, cumpliendo con estándares de calidad, con el fin de apoyar la productividad y competitividad de las organizaciones.
 
 ## Plan de trabajo
 
@@ -8,7 +8,7 @@ Los detalles de la materia así como el plan de trabajo pueden ser consultados e
 
 ## Unidad 1: Introducción al paradigma de la programación orientada a objetos
 
-En esta unidad se presentan los conceptos de la programación orientada a objetos, teniendo la intención de introducir al estudiante en los elementos del modelo de objetos, así como el uso básico del lenguaje de modelado unificado. 
+En esta unidad se presentan los conceptos de la programación orientada a objetos, teniendo la intención de introducir al estudiante en los elementos del modelo de objetos, así como el uso básico del lenguaje de modelado unificado.
 
 ### 1.1 Elementos del modelo de objetos: clases, objetos, abstracción, modularidad, encapsulamiento, herencia y polimorfismo.
 
@@ -18,35 +18,55 @@ Un **objeto** puede representar tanto elementos físicos (carro, producto, etc..
 
 Una **clase** sirve como una plantilla de la cual se definen las características (atributos) y operaciones (métodos) que los objetos que pertenecen a dicha clase pueden contener.
 
+![Clase y Objeto](./docs/images/clase-objeto.png)
+
 Por ejemplo, la clase `Automovil` puede contener los atributos `marca`, `modelo`, `tipoDeTransmision`, etc.., y los métodos `arrancar`, `acelerar`, `frenar`, etc...
 
-Dependiendo del contexto del sistema a desarrollar, los atributos y métodos pueden variar en número y complejidad, ya que es posible que una clase defina atributos de otras clases. Por ejemplo, en algunos sistemas, bastará con que el atributo motor sea una simple cadena de texto, pero en otros un objeto de la clase `Motor`con sus propios atributos y métodos.
+![Objeto carro con atributos y métodos](./docs/images/objeto-carro-atributos-metodos.png)
+
+Dependiendo del contexto del sistema a desarrollar, los atributos y métodos pueden variar en número y complejidad, ya que es posible que una clase defina atributos de otras clases. Por ejemplo, en algunos sistemas, bastará con que el atributo motor sea una simple cadena de texto, pero en otros un objeto de la clase `Motor` con sus propios atributos y métodos.
 
 Se le conoce como **instancia** a un objeto creado a partir de una clase concreta que contiene un estado inicial, el cual puede ser modificado durante la ejecución del programa.
 
+![Ejemplo de instancia](./docs/images/ejemplo_instancia.png)
+
 La **abstracción** es el proceso de definir el grado de detalle que una clase debe contener. A mayor detalle, menor abstracción y viceversa.
+
+![Ejemplo de Abstracción](./docs/images/abstraccion-concepto.jpeg)
 
 La **modularidad** se refiere al proceso de dividir un sistema complejo en diferentes subelementos (módulos) que contemplan funciones o características afines.
 
+![Ejemplo de Modularidad](./docs/images/modularidad-concepto.jpeg)
+
 El **encapsulamiento** es el proceso por el cual ciertos detalles de implementación son ocultados al usuario final y solamente se muestra lo necesario para poder interctuar con los objetos y/o clases.
+
+![Ejemplo de Encapsulamiento](./docs/images/encapsulamiento-concepto.jpeg)
 
 La **herencia** es el mecanismo por el cual las clases pueden compartir sus atributos y métodos, permitiendo así poder crear una jerarquía de objetos con rasgos comunes, y agregar nuevos comportamientos y atributos, así como de redefinir los heredados por las clases base.
 
+![Ejemplo de Herencia](./docs/images/herencia-ejemplo-basico.png)
+
 El **polimorfismo** es una propiedad que permite a los objetos interactuar de diferentes formas según sea el contexto de la ejecución. Las formas más comunes de polimorfismo se presentan en la Sobrecarga de métodos y la Sobre-escritura.
 
+![Ejemplo de Polimorfismo](./docs/images/polimorfismo-ejemplo-basico.png)
 
 ### 1.2 Lenguaje de modelado unificado: diagrama de clases
 
+UML es un lenguaje de modelado estándar que nos permite representar visualmente los diferentes elementos que componen un sistema.
+
+Para representar una clase, se puede utilizar la notación UML que se muestra a continuación:
+
+![Clase Persona en UML](./docs/images/diagrama-clase-persona.jpeg)
+
 Un diagrama de clases muestra un conjunto de clases, interfaces y colaboraciones, así como sus relaciones. Gráficamente, un diagrama de clases es una colección de nodos y arcos.
+
+![Diagrama de clases](./docs/images/diagrama-clases-ejemplo.png)
 
 Los diagramas de clases se utilizan para modelar la vista de diseño estática de un sistema. Esto incluye, principalmente, modelar el vocabulario del sistema, modelar las colaboraciones o modelar los esquemas.
 
-
-
-
 ## Unidad 2: Clases y objetos
 
-Esta unidad se centra en la definición e implementación de clases y objetos permitiendo al estudiante adquirir las competencias fundamentales de la programación orientada a objetos. 
+Esta unidad se centra en la definición e implementación de clases y objetos permitiendo al estudiante adquirir las competencias fundamentales de la programación orientada a objetos.
 
 ### 2.1 Declaración de clases: atributos, métodos, encapsulamiento
 
@@ -78,7 +98,7 @@ Tema por desarrollar
 
 ## Unidad 3: Herencia
 
-Esta unidad tiene como propósito la creación de objetos que incorporen propiedades y métodos de otros objetos, construyéndolos a partir de éstos sin necesidad de reescribirlo todo. 
+Esta unidad tiene como propósito la creación de objetos que incorporen propiedades y métodos de otros objetos, construyéndolos a partir de éstos sin necesidad de reescribirlo todo.
 
 ### 3.1 Definición: clase base, clase derivada
 
@@ -104,7 +124,7 @@ Tema por desarrollar
 
 ## Unidad 4: Polimorfismo
 
-Esta unidad trata una de las características fundamentales de la programación orientada a objetos: el polimorfismo, que permite reutilizar métodos con el mismo nombre, pero con relación a la clase a la que pertenece cada uno, con comportamientos diferentes. 
+Esta unidad trata una de las características fundamentales de la programación orientada a objetos: el polimorfismo, que permite reutilizar métodos con el mismo nombre, pero con relación a la clase a la que pertenece cada uno, con comportamientos diferentes.
 
 ### 4.1 Definición
 
@@ -128,7 +148,7 @@ Tema por desarrollar
 
 ## Unidad 5: Excepciones
 
-En esta unidad se tratan situaciones excepcionales que se presentan en tiempo de ejecución. 
+En esta unidad se tratan situaciones excepcionales que se presentan en tiempo de ejecución.
 
 ### 5.1 Definición
 
