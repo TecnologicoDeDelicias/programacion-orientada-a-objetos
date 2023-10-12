@@ -6,6 +6,21 @@ Esta asignatura aporta al perfil del Ingeniero la capacidad de analizar, desarro
 
 Los detalles de la materia así como el plan de trabajo pueden ser consultados en el siguiente [documento](https://www.delicias.tecnm.mx/doc/Oferta_Educativa/Sistemas/2Semestre/ProgramacionOrientadaaObjetos.pdf).
 
+### Requisitos para tomar la materia
+
+- Equipo de cómputo
+- Conexión a Internet
+- Cuenta de Github
+- Instalar editor de código (VSCode recomendable)
+
+### Criterios de Evaluación
+
+- Examen 50%
+- Prácticas y tareas 40% (Cada práctica/tarea tendrá criterios específicos)
+- Asistencia y puntualidad 10%
+
+> :eyes: Nota: Para tener derecho al examen deberá contar con todas las prácticas/tareas realizadas y entregadas en tiempo y forma
+
 ## Unidad 1: Introducción al paradigma de la programación orientada a objetos
 
 En esta unidad se presentan los conceptos de la programación orientada a objetos, teniendo la intención de introducir al estudiante en los elementos del modelo de objetos, así como el uso básico del lenguaje de modelado unificado.
