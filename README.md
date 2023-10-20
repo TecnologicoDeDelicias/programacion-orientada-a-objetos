@@ -87,7 +87,7 @@ Esta unidad se centra en la definición e implementación de clases y objetos pe
 
 La declaración de una clase consiste en definir la estructura de la misma.
 
-Veamos unos ejemplos simples en diferentes lenguajes:
+Veamos unos ejemplos simples en diferentes lenguajes.
 
 Java:
 
@@ -115,10 +115,63 @@ Javascript:
 class Persona {}
 ```
 
-C++
+C++:
 
 ```cpp
 class Persona {};
+```
+
+Con lo anterior, solamente hemos definido el nombre de la clase. Vamos a agregar los atributos `nombre`, `edad` y `estaVivo` con sus tipos de datos correspondientes.
+
+Java:
+
+```java
+class Persona {
+  String nombre;
+  int edad;
+  boolean estaVivo;
+}
+```
+
+Python:
+
+```python
+class Persona:
+    def __init__(self, nombre, edad):
+        self.nombre = nombre
+        self.edad = edad
+        self.estaVivo = True
+```
+
+Ruby:
+
+```ruby
+class Persona
+  attr_accessor :nombre, :edad, :estaVivo
+end
+```
+
+Javascript:
+
+```js
+class Persona {
+  nombre;
+  edad;
+  estaVivo;
+}
+```
+
+C++:
+
+```cpp
+#include <string>
+
+class Persona {
+public:
+    std::string nombre;
+    int edad;
+    bool estaVivo;
+};
 ```
 
 ### 2.2 Instanciación de una clase
