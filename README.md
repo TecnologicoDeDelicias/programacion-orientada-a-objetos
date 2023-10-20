@@ -85,7 +85,41 @@ Esta unidad se centra en la definición e implementación de clases y objetos pe
 
 ### 2.1 Declaración de clases: atributos, métodos, encapsulamiento
 
-Tema por desarrollar
+La declaración de una clase consiste en definir la estructura de la misma.
+
+Veamos unos ejemplos simples en diferentes lenguajes:
+
+Java:
+
+```java
+class Persona {}
+```
+
+Python:
+
+```python
+class Persona:
+  pass
+```
+
+Ruby:
+
+```ruby
+class Persona
+end
+```
+
+Javascript:
+
+```js
+class Persona {}
+```
+
+C++
+
+```cpp
+class Persona {};
+```
 
 ### 2.2 Instanciación de una clase
 
