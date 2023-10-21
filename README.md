@@ -379,7 +379,39 @@ Instrucciones
 
 ### 2.2 Instanciación de una clase
 
-Tema por desarrollar
+Instanciar se refiere al proceso de creación de un objeto a partir de una clase. Esto se logra a traves del uso del (los) constructor(es) de la clase. Ejemplos:
+
+Java:
+
+```java
+Persona juan = new Persona("Juan", 30);
+// o alternativamente
+var juan = new Persona("Juan", 30);
+```
+
+Python:
+
+```python
+juan = Persona("Juan", 30);
+```
+
+Ruby:
+
+```ruby
+juan = Persona.new("Juan", 30);
+```
+
+Javascript:
+
+```js
+const juan = new Persona("Juan", 30);
+```
+
+C++:
+
+```cpp
+Persona juan("Juan", 30);
+```
 
 ### 2.3 Referencia al objeto actual
 
