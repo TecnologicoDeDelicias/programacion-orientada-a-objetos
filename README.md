@@ -85,7 +85,297 @@ Esta unidad se centra en la definición e implementación de clases y objetos pe
 
 ### 2.1 Declaración de clases: atributos, métodos, encapsulamiento
 
-Tema por desarrollar
+La declaración de una clase consiste en definir la estructura de la misma.
+
+Veamos unos ejemplos simples en diferentes lenguajes.
+
+Java:
+
+```java
+class Persona {}
+```
+
+Python:
+
+```python
+class Persona:
+  pass
+```
+
+Ruby:
+
+```ruby
+class Persona
+end
+```
+
+Javascript:
+
+```js
+class Persona {}
+```
+
+C++:
+
+```cpp
+class Persona {};
+```
+
+Con lo anterior, solamente hemos definido el nombre de la clase. Vamos a agregar los atributos `nombre`, `edad` y `vive` con sus tipos de datos correspondientes.
+
+Java:
+
+```java
+class Persona {
+  String nombre;
+  int edad;
+  boolean vive;
+}
+```
+
+Python:
+
+```python
+class Persona:
+    def __init__(self, nombre, edad):
+        self.nombre = nombre
+        self.edad = edad
+        self.vive = True
+```
+
+Ruby:
+
+```ruby
+class Persona
+  attr_accessor :nombre, :edad, :vive
+end
+```
+
+Javascript:
+
+```js
+class Persona {
+  nombre;
+  edad;
+  vive;
+}
+```
+
+C++:
+
+```cpp
+#include <string>
+
+class Persona {
+public:
+    std::string nombre;
+    int edad;
+    bool vive;
+};
+```
+
+> :eyes: Observe que en algunos lenguajes no es necesario indicar explícitamente el tipo de dato, ya que el lenguaje resuelve de manera dinámica el tipo necesario
+
+Los atributos nos permiten almacenar información pertinente sobre cada objeto que se cree a partir de la clase, las cuales pueden (o no) ser modificadas durante la ejecución del programa.
+
+Por último vamos a definir algunos métodos básicos, como por ejemplo `saludar`, `incrementarEdad` y `morir`.
+
+Java:
+
+```java
+class Persona {
+  String nombre;
+  int edad;
+  boolean vive;
+
+  void saludar() {
+    System.out.println("Hola, mi nombre es " + nombre);
+  }
+
+  void incrementarEdad() {
+    edad = edad + 1;
+  }
+
+  void morir() {
+    vive = false;
+  }
+}
+```
+
+Python:
+
+```python
+class Persona:
+    def __init__(self, nombre, edad):
+        self.nombre = nombre
+        self.edad = edad
+        self.vive = True
+
+    def saludar(self):
+        print(f"Hola, mi nombre es {self.nombre}")
+
+    def incrementarEdad(self):
+        self.edad = self.edad + 1
+
+    def morir(self):
+        self.vive = False
+```
+
+Ruby:
+
+```ruby
+class Persona
+  attr_accessor :nombre, :edad, :vive
+
+  def saludar
+    puts "Hola, mi nombre es #{@nombre}"
+  end
+
+  def incrementar_edad
+    @edad = @edad + 1
+  end
+
+  def morir
+    @vive = false
+  end
+end
+```
+
+Javascript:
+
+```js
+class Persona {
+  nombre;
+  edad;
+  vive;
+
+  saludar() {
+    console.log(`Hola, mi nombre es ${this.nombre}`);
+  }
+
+  incrementarEdad() {
+    this.edad = this.edad + 1;
+  }
+}
+```
+
+C++:
+
+```cpp
+#include <iostream>
+#include <string>
+
+class Persona {
+public:
+    std::string nombre;
+    int edad;
+    bool vive;
+
+    void saludar() {
+      std::cout << "Hola, mi nombre es " << nombre << std::endl;
+    }
+
+    void incrementarEdad() {
+      edad++;
+    }
+
+    void morir() {
+      vive = false;
+    }
+};
+```
+
+Cada lenguaje define la manera en que los métodos son declarados, así como si es necesario especificar un valor de retorno, tal es el caso de Java y C++, los cuales para el caso de no retornar un valor se debe emplear la palabra reservada `void` (vacío).
+
+Uno de los problemas con las declaraciones anteriores es que los atributos y métodos son accesibles por otras clases, pudiendo modificar y leer sus valores directamente, lo cual puede romper el encapsulamiento de la clase.
+
+Por ejemplo:
+
+Java:
+
+```java
+class Persona {
+  // Atributos y métodos
+}
+
+// Otra clase
+public class Programa {
+  public static void main(String[] args) {
+    Persona juan = new Persona();
+    juan.saludar();
+    juan.nombre = "Pedro";
+    juan.edad = -10;
+    juan.vive = true;
+    juan.saludar();
+
+    juan.morir();
+    juan.saludar();
+    juan.vive = true;
+  }
+}
+```
+
+En este ejemplo, es posible escribir directamente los valores de los atributos por cualquier valor sin que existan restricciones, como es el caso del atributo vive, que puede ser modificado una vez que el método morir ha sido ejecutado.
+
+Una mejor manera de escribir las clases es mantener los atributos privados y sólo tener métodos para acceder a ellos para agregar las validaciones correspondientes.
+
+Java:
+
+```java
+class Persona {
+  private String nombre;
+  private int edad;
+  private boolean vive = true;
+
+  // otros métodos
+
+  void morir() {
+    if (vive) {
+      vive = false;
+    }
+  }
+
+  void saludar() {
+    if (vive) {
+      System.out.println("Hola, mi nombre es " + nombre);
+    } else {
+      System.out.println("DEP: " + nombre);
+    }
+  }
+}
+
+// Otra clase
+public class Programa {
+  public static void main(String[] args) {
+    Persona juan = new Persona("Juan", 30);
+    juan.saludar();
+    juan.morir();
+    juan.saludar();
+  }
+}
+```
+
+En esta nueva versión de la clase Persona, los atributos son acompañados de la palabra clave private, la cual nos indica que solamente pueden ser accedidos dentro de la misma clase, pero no fuera de ella, y solo es posible interactuar a traves de los métodos de la misma.
+
+#### Práctica: Crear la clase Persona en diferentes lenguajes
+
+Instrucciones
+
+1. Crear una carpeta llamada practicas/unidad2 en el repositorio personal
+2. Dentro de la carpeta crear las siguientes carpetas y archivos correspondientes:
+
+   - :file_folder: java
+     - Persona.java
+   - :file_folder: ruby
+     - Persona.rb
+   - :file_folder: python
+     - Persona.py
+   - :file_folder: js
+     - Persona.js
+   - :file_folder: cpp
+     - Persona.cpp
+
+3. Escribir el código correspondiente en cada archivo y ejecutarlo.
 
 ### 2.2 Instanciación de una clase
 
