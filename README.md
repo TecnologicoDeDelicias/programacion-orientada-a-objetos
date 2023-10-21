@@ -357,6 +357,26 @@ public class Programa {
 
 En esta nueva versión de la clase Persona, los atributos son acompañados de la palabra clave private, la cual nos indica que solamente pueden ser accedidos dentro de la misma clase, pero no fuera de ella, y solo es posible interactuar a traves de los métodos de la misma.
 
+#### Práctica: Crear la clase Persona en diferentes lenguajes
+
+Instrucciones
+
+1. Crear una carpeta llamada practicas/unidad2 en el repositorio personal
+2. Dentro de la carpeta crear las siguientes carpetas y archivos correspondientes:
+
+   - :file_folder: java
+     - Persona.java
+   - :file_folder: ruby
+     - Persona.rb
+   - :file_folder: python
+     - Persona.py
+   - :file_folder: js
+     - Persona.js
+   - :file_folder: cpp
+     - Persona.cpp
+
+3. Escribir el código correspondiente en cada archivo y ejecutarlo.
+
 ### 2.2 Instanciación de una clase
 
 Tema por desarrollar
