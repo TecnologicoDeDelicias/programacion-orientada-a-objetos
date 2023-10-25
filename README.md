@@ -214,7 +214,7 @@ class Persona:
     def saludar(self):
         print(f"Hola, mi nombre es {self.nombre}")
 
-    def incrementarEdad(self):
+    def incrementar_edad(self):
         self.edad = self.edad + 1
 
     def morir(self):
@@ -392,7 +392,7 @@ var juan = new Persona("Juan", 30);
 Python:
 
 ```python
-juan = Persona("Juan", 30);
+juan = Persona("Juan", 30)
 ```
 
 Ruby:
@@ -415,15 +415,329 @@ Persona juan("Juan", 30);
 
 ### 2.3 Referencia al objeto actual
 
-Tema por desarrollar
+Al momento de crear y manipular un objeto o instancia de una clase, es necesario en algunos casos hacer referencia asimismo dentro de la clase.
+
+Para ello se utiliza una palabra reservada definida por el lenguaje. Aquí algunos ejemplos:
+
+Java:
+
+```java
+class Persona {
+  String nombre;
+
+  // otro código ...
+
+  boolean esMayorQue(Persona otraPersona) {
+    // Utilizamos la palabra this para hacer referencia al objeto actual
+    // No es requerida a menos que el nombre de la variable o parámetro tenga conflicto con el atributo
+    return this.edad > otraPersona.edad;
+  }
+}
+
+// Ejemplo en uso
+
+Persona juan = new Persona("Juan", 20);
+Persona pedro = new Persona("Pedro", 15);
+
+if (pedro.esMayorQue(juan)) {
+  System.out.println("Pedro es mayor que Juan");
+} else if (juan.esMayorQue(pedro)) {
+  System.out.println("Juan es mayor que Pedro");
+} else {
+  System.out.println("Ambos tienen la misma edad");
+}
+
+```
+
+Python:
+
+```python
+class Persona:
+  # otro código...
+
+  # Se usa la palabra self para hacer referencia al objeto actual
+  def es_mayor_que(self, otra_persona):
+    return self.edad > otra_persona.edad
+
+# Ejemplo de uso
+juan = Persona("Juan", 20)
+pedro = Persona("Pedro", 15)
+
+if juan.es_mayor_que(pedro):
+  print("Juan es mayor que Pedro")
+elif pedro.es_mayor_que(juan):
+  print("Pedro es mayor que Juan")
+else:
+  print("Ambos tienen la misma edad")
+
+```
+
+Ruby:
+
+```ruby
+class Persona
+  # otro código
+
+  # se usa la palabra self para hacer referencia al objeto actual
+  def es_mayor_que(otra_persona)
+    return self.edad > otra_persona.edad
+  end
+
+  # es posible acceder a los atributos utilizando un @ antes del nombre del atributo
+  def es_mayor_de_edad
+    @edad > 18 # la palabra return es opcional
+  end
+
+end
+
+# Ejemplo de uso
+juan = Persona.new("Juan", 20)
+pedro = Persona.new("Pedro", 15)
+
+if juan.es_mayor_que(pedro)
+  puts "Juan es mayor que Pedro"
+elsif pedro.es_mayor_que juan # No es necesario poner el paréntesis para llamar la función
+  puts "Pedro es mayor que Juan"
+else
+  puts "Ambos tienen la misma edad"
+end
+
+```
+
+#### Práctica: Agregar métodos con referencia al objeto actual
+
+Instrucciones:
+
+1. En su repositorio de ejemplos cree un nuevo branch llamado `practica-referencia-objeto-actual`
+
+```
+git branch practica-referencia-objeto-actual
+```
+
+2. Hacer checkout al nuevo branch
+
+```
+git checkout practica-referencia-objeto-actual
+```
+
+3. Agregue el método `esMayorQue` en los diferentes lenguajes
+4. Una vez terminados los cambios haga commit
+
+```
+git commit -m "Se agregan ejemplos de referencia al objeto actual"
+```
+
+5. Haga push con la siguiente instrucción
+
+```
+git push -u origin practica-referencia-objeto-actual
+```
+
+6. Cree un Pull Request y añada al profesor como revisor y a algún compañero de clase
+
+7. Una vez revisado el código haga merge a `main`
 
 ### 2.4 Métodos: declaración, mensajes, paso de parámetros, retorno de valores
 
-Tema por desarrollar
+En la programación orientada a objetos (POO), un método es una función o procedimiento asociado a un objeto particular o a una clase. Los métodos son una de las características clave de la POO y se utilizan para representar el comportamiento de los objetos y las operaciones que pueden realizar.
+
+Los métodos son una parte fundamental de la POO y se utilizan para modelar el comportamiento de objetos en un programa. Permiten la modularidad, la reutilización de código y la representación de comportamiento específico de objetos, lo que hace que la programación orientada a objetos sea una metodología poderosa y flexible para el desarrollo de software.
+
+### Declaración de métodos
+
+Cada lenguaje define su sintaxis para declarar métodos, pero de manera general estos son los elementos principales:
+
+- **Nombre del método**: por lo general se utilizan verbos en infinitivo que indican una acción tales como: `imprimir`, `mostrar`, `dibujar`, etc... Normalmente son escritos en minúsculas, pero en caso de contener 2 o más palabras se puede usar la notación camel case (ejemplo: `imprimirReporte`) o la notación snake case (ejemplo: `imprimir_reporte`).
+
+- **Visibilidad**: Algunos lenguajes permiten definir la visibilidad de los métodos a traves de palabras reservadas como `private`, `package`, `public`, o a traves de otros mecanismos.
+
+- **Tipo de método**: Algunos lenguajes permiten definir métodos de instancia o métodos de clase, siendo estos últimos definidos por la palabra clave `static`.
+
+- **Parámetros**: Un método puede contener 0 o multiples parámetros siendo el límite definido por el lenguaje. Normalmente se busca que la cantidad de parámetros no exceda de 4 para su facilidad de uso.
+
+- **Tipo de retorno**: En algunos lenguajes es requerido definir el tipo de retorno explícitamente, como es el caso de Java y C++. En el caso de que no exista un valor de retorno algunos lenguajes utilizan el tipo `void`.
+
+- **Cuerpo del método**: Aquí es donde se definen las operaciones o algoritmos propios del método. Normalmente un método debe ser concreto y cumplir solamente una única responsabilidad.
+
+A continuación se muestran algunos ejemplos en diferentes lenguajes
+
+Java:
+
+```java
+public class Persona {
+
+  public void saludar() {
+    // aquí va el cuerpo del método
+  }
+
+  public static void metodoEstatico() {
+    System.out.println("Este método se puede invocar sin necesidad de un objeto")
+  }
+
+  // También es posible pasar objetos de clases que hemos creado nosotros
+  public boolean meGusta(Comida comida) {
+    return this.comidasFavoritas.contains(comida);
+  }
+
+  private String contarSecreto() {
+    return "Solo yo puedo invocar este método";
+  }
+}
+
+// Uso
+
+Persona juan = new Persona("Juan", 20);
+
+juan.addComidaFavorita(chocolate);
+juan.addComidaFavorita(pizza);
+
+// Este método puede ser invocado desde cualquier lugar ya que es público
+juan.saludar();
+
+// No es necesario tener una instancia de clase para usar este método
+Persona.metodoEstatico()
+
+// Aunque es valido usar:
+
+juan.metodoEstatico()
+
+// Esto nos daria un error de compilación, ya que el método es privado
+String secreto = juan.contarSecreto();
+
+// Aquí vemos el uso de parámetros
+boolean gustaBrocoli = juan.meGusta(brocoli);
+
+```
+
+Python:
+
+En Python, no existen clases públicas o privadas de la misma manera que en algunos otros lenguajes de programación, como Java o C++. Python sigue el principio de "consentimiento del adulto" en lugar de "imposición", lo que significa que no restringe el acceso a los miembros de una clase. En su lugar, confía en convenciones y buenas prácticas para lograr la encapsulación y proteger la privacidad de los miembros de la clase.
+
+Sin embargo, Python utiliza una convención para indicar que ciertos miembros de una clase no deben ser accedidos desde fuera de la clase. Esta convención es la siguiente:
+
+Los miembros (atributos o métodos) cuyos nombres comienzan con un guion bajo (`_`) se consideran "privados" y no deberían ser accedidos directamente desde fuera de la clase. Por ejemplo, `_mi_atributo` o `_mi_metodo()`.
+
+Los miembros cuyos nombres comienzan y terminan con dos guiones bajos (`__`) tienen un comportamiento de "name mangling" y son más difíciles de acceder desde fuera de la clase. Por ejemplo, `__mi_atributo` se convierte en `_nombre_de_clase__mi_atributo`.
+Es importante destacar que estas convenciones son solo un acuerdo entre los desarrolladores y el lenguaje en sí no impide el acceso a estos miembros de ninguna manera. Si bien puedes acceder a los miembros "privados" de una clase en Python, es una práctica recomendada no hacerlo directamente y respetar la privacidad de los atributos y métodos.
+
+En resumen, Python no implementa explícitamente el concepto de clases públicas o privadas, pero fomenta la encapsulación y la protección de miembros de clase a través de convenciones y buenas prácticas de programación.
+
+```python
+class Persona:
+  atributo_de_clase = 42
+
+  def saludar():
+    # aquí va el cuerpo del método
+
+  def metodo_estatico():
+    print("Este es un método estático")
+
+  def me_gusta(self, comida):
+    return comida in self.comidas_favoritas
+
+  def __contar_secreto():
+    return "Solo yo puedo invocar este método"
+
+  @classmethod
+  def metodo_de_clase(cls):
+    print(f"Este es un método de clase. El valor del atributo de clase es {cls.atributo_clase}")
+
+
+# Uso
+
+juan = Persona("Juan", 20)
+juan.add_comida_favorita(chocolate)
+juan.add_comida_favorita(pizza)
+
+# Saludar puede ser invocado desde cualquier lugar
+juan.saludar();
+
+# Llamada al método estático desde la clase
+Persona.metodo_estatico()
+# Llamada desde el objeto
+
+juan.metodo_estatico()
+
+# Intentar acceder al método privado generará un error:
+secreto = juan.__contar_secreto();
+
+# Método que recibe un parámetro
+gusta_brocoli = juan.me_gusta(brocoli);
+
+# Llamando a método de clase
+Persona.metodo_de_clase()
+juan.metodo_de_clase
+
+```
 
 ### 2.5 Constructores y destructores declaración, uso y aplicaciones
 
-Tema por desarrollar
+En programación orientada a objetos (POO), un constructor y un destructor son métodos especiales que se utilizan para inicializar y liberar recursos de un objeto, respectivamente. Estos conceptos son especialmente relevantes en lenguajes de programación que gestionan la asignación y liberación de memoria de manera explícita, como C++.
+
+#### Constructor
+
+Un constructor es un método especial que se llama automáticamente cuando se crea una instancia (objeto) de una clase.
+Su función principal es inicializar los atributos del objeto y realizar cualquier tarea de inicialización necesaria.
+Los constructores suelen recibir argumentos que se utilizan para configurar el objeto durante la creación.
+Los constructores tienen el mismo nombre que la clase y no tienen un tipo de retorno explícito.
+En muchos lenguajes, una clase puede tener varios constructores con diferentes parámetros, lo que se conoce como sobrecarga de constructores.
+
+Veamos algunos ejemplos:
+
+Java:
+
+```java
+
+public class Boton {
+  // otras propiedades y atributos ...
+
+  // Constructor sin argumentos
+  public Boton() {
+    this("Boton", 100, 300);
+  }
+  // Constructor con un argumento
+  public Boton(String texto) {
+    this(texto, 100, 300);
+  }
+
+  private Boton(String texto, int alto, int ancho) {
+    this.texto = texto;
+    this.alto = alto;
+    this.ancho = ancho;
+  }
+}
+
+// Uso
+
+Boton boton1 = new Boton();
+Boton boton2 = new Boton("Boton 2");
+
+// Esto produce un error ya que no se puede acceder al constructor privado
+Boton boton3 = new Boton("Boton 3", 50, 400);
+```
+
+#### Destructor
+
+Un destructor es un método especial que se llama automáticamente cuando un objeto se destruye o sale de ámbito.
+Su función principal es liberar los recursos utilizados por el objeto, como memoria dinámica u otros recursos adquiridos durante la vida del objeto.
+
+En algunos lenguajes, como C++, los destructores se utilizan para garantizar una limpieza adecuada y prevenir pérdidas de memoria y fugas de recursos.
+
+En lenguajes de programación gestionados por recolección de basura, como Java o Python, la gestión de la memoria se realiza automáticamente, y los programadores no necesitan preocuparse por los destructores. En su lugar, se utilizan métodos de finalización o recolección de basura para liberar recursos.
+
+```cpp
+class MiClase {
+public:
+    MiClase() {
+        // Constructor
+    }
+
+    ~MiClase() {
+        // Destructor
+        // Realizar tareas de limpieza aquí
+    }
+};
+```
 
 ### 2.6 Sobrecarga de métodos
 
