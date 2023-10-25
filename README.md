@@ -398,7 +398,7 @@ juan = Persona("Juan", 30)
 Ruby:
 
 ```ruby
-juan = Persona.new("Juan", 30);
+juan = Persona.new("Juan", 30)
 ```
 
 Javascript:
