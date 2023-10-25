@@ -716,6 +716,23 @@ Boton boton2 = new Boton("Boton 2");
 Boton boton3 = new Boton("Boton 3", 50, 400);
 ```
 
+Python:
+
+```python
+class Boton:
+  def __init__(self, texto = "Boton", alto = 100, ancho = 300)
+    self.texto = texto
+    self.alto = alto
+    self.ancho = ancho
+
+# Uso
+
+if __name__ == "__main__":
+  boton1 = Boton()
+  boton2 = Boton("Boton 2")
+  boton3 = Boton("Boton 3", 50, 400)
+```
+
 #### Destructor
 
 Un destructor es un método especial que se llama automáticamente cuando un objeto se destruye o sale de ámbito.
@@ -741,11 +758,145 @@ public:
 
 ### 2.6 Sobrecarga de métodos
 
-Tema por desarrollar
+La sobrecarga de métodos en programación orientada a objetos (POO) es un concepto que permite definir múltiples métodos con el mismo nombre en una clase, pero con diferentes listas de argumentos (parámetros). En otras palabras, es la capacidad de una clase de tener varios métodos con el mismo nombre, pero cada uno de ellos acepta un conjunto distinto de parámetros.
+
+La sobrecarga de métodos permite que una clase ofrezca diferentes funcionalidades o comportamientos basados en la cantidad o el tipo de argumentos que recibe. Esto hace que el código sea más flexible y fácil de usar, ya que los programadores pueden llamar al método con diferentes argumentos según sus necesidades.
+
+En lenguajes de programación como Java o C++, la sobrecarga de métodos se basa en la firma del método, que incluye el nombre del método y la lista de tipos de parámetros. Los métodos sobrecargados deben tener el mismo nombre pero una firma de parámetros diferente.
+
+Java:
+
+```java
+class Reservacion {
+
+  void reservar(Date fechaInicio, Date fechaFin) {
+    // lógica para reservar dentro de esas fechas
+  }
+
+  void reservar(Date fechaInicio, int numeroDeDias) {
+    // lógica para reservar desde una fecha dada y calcular la fecha fin en base al # de días
+  }
+}
+
+```
+
+En Python, Ruby o Javascript no existe el concepto como tal, si no que se tendría que determinar el tipo de dato dentro del método
+
+Javascript:
+
+```js
+class Reservacion {
+  reservar(fechaInicio, parametro) {
+    if (typeof parametro === "number") {
+      // lógica para cuando se pasa un número
+    } else {
+      // lógica para cuando se pasa otro dato
+    }
+  }
+}
+```
 
 ### 2.7 Sobrecarga de operadores: Concepto y utilidad, operadores unarios y binarios
 
-Tema por desarrollar
+La sobrecarga de operadores o también llamada "Operator Overloading" es una funcionalidad que algunos lenguajes utilizan para definir más de una operación para un operador dado.
+
+El ejemplo más común es el operador +, que dependiendo de los operandos, realiza una funcionalidad distinta.
+
+Veamos un ejemplo en Java:
+
+Java:
+
+```java
+var resultado1 = 145 + 25;
+System.out.println(resultado1);
+
+
+var resultado2 = 145 + "25";
+System.out.println(resultado2);
+```
+
+En algunos lenguajes como C++, C# o Python, es posible redefinir las operaciones aritméticas de clases personalizadas.
+
+C++
+
+```cpp
+#include <iostream>
+
+class NumeroComplejo {
+public:
+    NumeroComplejo(double real, double imaginario) : real(real), imaginario(imaginario) {}
+
+    NumeroComplejo operator+(const NumeroComplejo& otro) {
+        return NumeroComplejo(real + otro.real, imaginario + otro.imaginario);
+    }
+
+    void mostrar() {
+        std::cout << real;
+        if (imaginario >= 0) {
+            std::cout << " + " << imaginario << "i";
+        } else {
+            std::cout << " - " << -imaginario << "i";
+        }
+        std::cout << std::endl;
+    }
+
+private:
+    double real;
+    double imaginario;
+};
+
+int main() {
+    NumeroComplejo numero1(3.0, 4.0);  // Crea un número complejo (3 + 4i)
+    NumeroComplejo numero2(1.5, -2.5); // Crea otro número complejo (1.5 - 2.5i)
+
+    NumeroComplejo suma = numero1 + numero2; // Suma los números complejos
+
+    std::cout << "Número 1: ";
+    numero1.mostrar(); // Muestra el primer número complejo
+    std::cout << "Número 2: ";
+    numero2.mostrar(); // Muestra el segundo número complejo
+    std::cout << "Suma: ";
+    suma.mostrar(); // Muestra el resultado de la suma
+
+    return 0;
+}
+
+```
+
+Python:
+
+```cpp
+class NumeroComplejo:
+    def __init__(self, real, imaginario):
+        self.real = real
+        self.imaginario = imaginario
+
+    def __add__(self, otro):
+        suma_real = self.real + otro.real
+        suma_imaginario = self.imaginario + otro.imaginario
+        return NumeroComplejo(suma_real, suma_imaginario)
+
+    def mostrar(self):
+        if self.imaginario >= 0:
+            print(f"{self.real} + {self.imaginario}i")
+        else:
+            print(f"{self.real} - {abs(self.imaginario)}i")
+
+# Crear dos números complejos
+numero1 = NumeroComplejo(3.0, 4.0)   # Número complejo (3 + 4i)
+numero2 = NumeroComplejo(1.5, -2.5)  # Número complejo (1.5 - 2.5i)
+
+# Sumar los números complejos
+suma = numero1 + numero2
+
+# Mostrar los números complejos y su suma
+print("Número 1:")
+numero1.mostrar()
+print("Número 2:")
+numero2.mostrar()
+print("Suma:")
+suma.mostrar()
+```
 
 ## Unidad 3: Herencia
 
