@@ -871,7 +871,7 @@ int main() {
 
 Python:
 
-```cpp
+```python
 class NumeroComplejo:
     def __init__(self, real, imaginario):
         self.real = real
