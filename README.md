@@ -555,6 +555,8 @@ Cada lenguaje define su sintaxis para declarar métodos, pero de manera general 
 
 - **Parámetros**: Un método puede contener 0 o multiples parámetros siendo el límite definido por el lenguaje. Normalmente se busca que la cantidad de parámetros no exceda de 4 para su facilidad de uso.
 
+  > Nota: Al momento de usar un método y pasar los valores actuales de uso, a estos se les denomina **Argumentos**
+
 - **Tipo de retorno**: En algunos lenguajes es requerido definir el tipo de retorno explícitamente, como es el caso de Java y C++. En el caso de que no exista un valor de retorno algunos lenguajes utilizan el tipo `void`.
 
 - **Cuerpo del método**: Aquí es donde se definen las operaciones o algoritmos propios del método. Normalmente un método debe ser concreto y cumplir solamente una única responsabilidad.
@@ -571,7 +573,9 @@ public class Persona {
   }
 
   public static void metodoEstatico() {
-    System.out.println("Este método se puede invocar sin necesidad de un objeto")
+    System.out.println("Este método se puede invocar sin necesidad de un objeto");
+    // No es posible utilizar la palabra this dentro de un método estático
+    // this.saludar();
   }
 
   // También es posible pasar objetos de clases que hemos creado nosotros
@@ -595,11 +599,11 @@ juan.addComidaFavorita(pizza);
 juan.saludar();
 
 // No es necesario tener una instancia de clase para usar este método
-Persona.metodoEstatico()
+Persona.metodoEstatico();
 
 // Aunque es valido usar:
 
-juan.metodoEstatico()
+juan.metodoEstatico();
 
 // Esto nos daria un error de compilación, ya que el método es privado
 String secreto = juan.contarSecreto();
@@ -629,6 +633,7 @@ class Persona:
   def saludar():
     # aquí va el cuerpo del método
 
+  @staticmethod
   def metodo_estatico():
     print("Este es un método estático")
 
@@ -680,6 +685,7 @@ Un constructor es un método especial que se llama automáticamente cuando se cr
 Su función principal es inicializar los atributos del objeto y realizar cualquier tarea de inicialización necesaria.
 Los constructores suelen recibir argumentos que se utilizan para configurar el objeto durante la creación.
 Los constructores tienen el mismo nombre que la clase y no tienen un tipo de retorno explícito.
+
 En muchos lenguajes, una clase puede tener varios constructores con diferentes parámetros, lo que se conoce como sobrecarga de constructores.
 
 Veamos algunos ejemplos:
