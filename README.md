@@ -1,5 +1,24 @@
 # Programación Orientada a Objetos
 
+## Contenido
+
+- [Plan de trabajo](#plan-de-trabajo)
+- [Unidad 1: Introducción al paradigma de la Programación Orientada a Objetos](#unidad-1-introducción-al-paradigma-de-la-programación-orientada-a-objetos)
+  - [1.1 Elementos del modelo de objetos: clases, objetos, abstracción, modularidad, encapsulamiento, herencia y polimorfismo.](#11-elementos-del-modelo-de-objetos-clases-objetos-abstracción-modularidad-encapsulamiento-herencia-y-polimorfismo)
+  - [1.2 Lenguaje de modelado unificado: diagrama de clases](#12-lenguaje-de-modelado-unificado-diagrama-de-clases)
+- [Unidad 2: Clases y Objetos](#unidad-2-clases-y-objetos)
+  - [2.1 Declaración de clases: atributos, métodos, encapsulamiento](#21-declaración-de-clases-atributos-métodos-encapsulamiento)
+  - [2.2 Instanciación de una clase](#22-instanciación-de-una-clase)
+  - [2.3 Referencia al objeto actual](#23-referencia-al-objeto-actual)
+  - [2.4 Métodos: declaración, mensajes, paso de parámetros, retorno de valores](#24-métodos-declaración-mensajes-paso-de-parámetros-retorno-de-valores)
+  - [2.5 Constructores y destructores declaración, uso y aplicaciones](#25-constructores-y-destructores-declaración-uso-y-aplicaciones)
+  - [2.6 Sobrecarga de métodos](#26-sobrecarga-de-métodos)
+  - [2.7 Sobrecarga de operadores: Concepto y utilidad, operadores unarios y binarios](#27-sobrecarga-de-operadores-concepto-y-utilidad-operadores-unarios-y-binarios)
+- [Unidad 3: Herencia](#unidad-3-herencia)
+- [Unidad 4: Polimorfismo](#unidad-4-polimorfismo)
+- [Unidad 5: Excepciones](#unidad-5-excepciones)
+- [Unidad 6: Flujos y archivos](#unidad-6-flujos-y-archivos)
+
 Esta asignatura aporta al perfil del Ingeniero la capacidad de analizar, desarrollar, implementar y administrar software de aplicación orientado a objetos, cumpliendo con estándares de calidad, con el fin de apoyar la productividad y competitividad de las organizaciones.
 
 ## Plan de trabajo
