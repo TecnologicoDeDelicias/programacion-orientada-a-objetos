@@ -753,7 +753,9 @@ if __name__ == "__main__":
 Ruby:
 
 ```ruby
-# Ticket #5: Agregar ejemplo en Ruby
+class Boton
+# Aqui va el código solicitado
+end
 ```
 
 Javascript:
