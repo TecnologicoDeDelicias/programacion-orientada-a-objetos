@@ -783,6 +783,24 @@ if __name__ == "__main__":
   boton3 = Boton("Boton 3", 50, 400)
 ```
 
+Ruby:
+
+```ruby
+# Ticket #5: Agregar ejemplo en Ruby
+```
+
+Javascript:
+
+```js
+// Ticket #6: Agregar ejemplo en Javascript
+```
+
+C++:
+
+```cpp
+// Ticket #7: Agregar ejemplo en C++
+```
+
 #### Destructor
 
 Un destructor es un método especial que se llama automáticamente cuando un objeto se destruye o sale de ámbito.
@@ -830,6 +848,12 @@ class Reservacion {
 
 ```
 
+C++:
+
+```cpp
+// Ticket #8: Agregar ejemplo de sobrecarga de métodos en C++
+```
+
 En Python, Ruby o Javascript no existe el concepto como tal, si no que se tendría que determinar el tipo de dato dentro del método
 
 Javascript:
@@ -844,6 +868,18 @@ class Reservacion {
     }
   }
 }
+```
+
+Python:
+
+```python
+# Ticket #9: Agregar ejemplo de sobrecarga de métodos en Python
+```
+
+Ruby:
+
+```ruby
+# Ticket #10: Agregar ejemplo de sobrecarga de métodos en Ruby
 ```
 
 ### 2.7 Sobrecarga de operadores: Concepto y utilidad, operadores unarios y binarios
@@ -865,9 +901,21 @@ var resultado2 = 145 + "25";
 System.out.println(resultado2);
 ```
 
+Ruby:
+
+```ruby
+# Ticket #12: Agregar ejemplo de sobrecarga de operadores en Ruby
+```
+
+Javascript:
+
+```js
+// Ticket #13: Agregar ejemplo de sobrecarga de operadores en Javascript
+```
+
 En algunos lenguajes como C++, C# o Python, es posible redefinir las operaciones aritméticas de clases personalizadas.
 
-C++
+C++:
 
 ```cpp
 #include <iostream>
@@ -931,21 +979,12 @@ class NumeroComplejo:
             print(f"{self.real} + {self.imaginario}i")
         else:
             print(f"{self.real} - {abs(self.imaginario)}i")
+```
 
-# Crear dos números complejos
-numero1 = NumeroComplejo(3.0, 4.0)   # Número complejo (3 + 4i)
-numero2 = NumeroComplejo(1.5, -2.5)  # Número complejo (1.5 - 2.5i)
+C#:
 
-# Sumar los números complejos
-suma = numero1 + numero2
-
-# Mostrar los números complejos y su suma
-print("Número 1:")
-numero1.mostrar()
-print("Número 2:")
-numero2.mostrar()
-print("Suma:")
-suma.mostrar()
+```cs
+// Ticket #11: Agregar ejemplo de sobrecarga de operadores en C#
 ```
 
 ## Unidad 3: Herencia
