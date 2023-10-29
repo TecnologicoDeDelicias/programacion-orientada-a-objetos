@@ -1,5 +1,7 @@
 # Programación Orientada a Objetos
 
+Esta asignatura aporta al perfil del Ingeniero la capacidad de analizar, desarrollar, implementar y administrar software de aplicación orientado a objetos, cumpliendo con estándares de calidad, con el fin de apoyar la productividad y competitividad de las organizaciones.
+
 ## Contenido
 
 - [Plan de trabajo](#plan-de-trabajo)
@@ -15,11 +17,29 @@
   - [2.6 Sobrecarga de métodos](#26-sobrecarga-de-métodos)
   - [2.7 Sobrecarga de operadores: Concepto y utilidad, operadores unarios y binarios](#27-sobrecarga-de-operadores-concepto-y-utilidad-operadores-unarios-y-binarios)
 - [Unidad 3: Herencia](#unidad-3-herencia)
+  - [3.1 Definición: Clase base, Clase derivada](#31-definición-clase-base-clase-derivada)
+  - [3.2 Clasificación: herencia simple, herencia múltiple](#32-clasificación-herencia-simple-herencia-múltiple)
+  - [3.3 Reutilización de miembros heredados](#33-reutilización-de-miembros-heredados)
+  - [3.4 Referencia al objeto de la clase base](#34-referencia-al-objeto-de-la-clase-base)
+  - [3.5 Constructores y destructores en clases derivadas](#35-constructores-y-destructores-en-clases-derivadas)
+  - [3.6 Redefinición de métodos en clases derivadas](#36-redefinición-de-métodos-en-clases-derivadas)
 - [Unidad 4: Polimorfismo](#unidad-4-polimorfismo)
+  - [4.1 Definición](#41-definición)
+  - [4.2 Clases abstractas: definición, métodos abstractos, implementación de clases abstractas, modelado de clases abstractas](#42-clases-abstractas-definición-métodos-abstractos-implementación-de-clases-abstractas-modelado-de-clases-abstractas)
+  - [4.3 Interfaces: definición, implementación de interfaces, herencia de interfaces](#43-interfaces-definición-implementación-de-interfaces-herencia-de-interfaces)
+  - [4.4 Variables polimórficas (plantillas): definición, uso y aplicaciones](#44-variables-polimórficas-plantillas-definición-uso-y-aplicaciones)
+  - [4.5 Reutilización de código](#45-reutilización-de-código)
 - [Unidad 5: Excepciones](#unidad-5-excepciones)
+  - [5.1 Definición](#51-definición)
+  - [5.2 Tipos de excepciones](#52-tipos-de-excepciones)
+  - [5.3 Propagación de excepciones](#53-propagación-de-excepciones)
+  - [5.4 Gestión de excepciones: manejo de excepciones, lanzamiento de excepciones](#54-gestión-de-excepciones-manejo-de-excepciones-lanzamiento-de-excepciones)
+  - [5.5 Creación y manejo de excepciones definidas por el usuario](#55-creación-y-manejo-de-excepciones-definidas-por-el-usuario)
 - [Unidad 6: Flujos y archivos](#unidad-6-flujos-y-archivos)
-
-Esta asignatura aporta al perfil del Ingeniero la capacidad de analizar, desarrollar, implementar y administrar software de aplicación orientado a objetos, cumpliendo con estándares de calidad, con el fin de apoyar la productividad y competitividad de las organizaciones.
+  - [6.1 Definición](#61-definición)
+  - [6.2 Clasificación: Archivos de texto y binarios](#62-clasificación-archivos-de-texto-y-binarios)
+  - [6.3 Operaciones básicas y tipos de acceso](#63-operaciones-básicas-y-tipos-de-acceso)
+  - [6.4 Manejo de objetos persistentes](#64-manejo-de-objetos-persistentes)
 
 ## Plan de trabajo
 
@@ -932,7 +952,7 @@ suma.mostrar()
 
 Esta unidad tiene como propósito la creación de objetos que incorporen propiedades y métodos de otros objetos, construyéndolos a partir de éstos sin necesidad de reescribirlo todo.
 
-### 3.1 Definición: clase base, clase derivada
+### 3.1 Definición: Clase base, Clase derivada
 
 Tema por desarrollar
 
@@ -953,6 +973,8 @@ Tema por desarrollar
 Tema por desarrollar
 
 ### 3.6 Redefinición de métodos en clases derivadas
+
+Tema por desarrollar
 
 ## Unidad 4: Polimorfismo
 
