@@ -976,6 +976,7 @@ cd ~/projects/tecnm/programacion-orientada-a-objetos
 ```
 git clone https://github.com/TecnologicoDeDelicias/programacion-orientada-a-objetos.git documentacion-materia
 ```
+> En caso de usar SSH utilizar el comando `git clone git@github.com:TecnologicoDeDelicias/programacion-orientada-a-objetos.git documentacion-materia`
 
 6. Entre a la carpeta de la documentación de la materia recién creada
 
