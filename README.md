@@ -64,6 +64,7 @@ Los detalles de la materia así como el plan de trabajo pueden ser consultados e
 
 - [Taller de Git](https://github.com/DevelopersDelicias/git-workshop-2021/tree/main)
 - [Canal de Youtube](https://www.youtube.com/@benjamincisneros797/videos)
+- [Dev Docs](https://devdocs.io/)
 
 ## Unidad 1: Introducción al paradigma de la programación orientada a objetos
 
