@@ -754,7 +754,7 @@ Ruby:
 
 ```ruby
 class Boton
-# Los demas cambios
+# se hacen cambios solicitados
 end
 ```
 
