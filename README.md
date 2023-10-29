@@ -548,39 +548,6 @@ end
 
 ```
 
-#### Práctica: Agregar métodos con referencia al objeto actual
-
-Instrucciones:
-
-1. En su repositorio de ejemplos cree un nuevo branch llamado `practica-referencia-objeto-actual`
-
-```
-git branch practica-referencia-objeto-actual
-```
-
-2. Hacer checkout al nuevo branch
-
-```
-git checkout practica-referencia-objeto-actual
-```
-
-3. Agregue el método `esMayorQue` en los diferentes lenguajes
-4. Una vez terminados los cambios haga commit
-
-```
-git commit -m "Se agregan ejemplos de referencia al objeto actual"
-```
-
-5. Haga push con la siguiente instrucción
-
-```
-git push -u origin practica-referencia-objeto-actual
-```
-
-6. Cree un Pull Request y añada al profesor como revisor y a algún compañero de clase
-
-7. Una vez revisado el código haga merge a `main`
-
 ### 2.4 Métodos: declaración, mensajes, paso de parámetros, retorno de valores
 
 En la programación orientada a objetos (POO), un método es una función o procedimiento asociado a un objeto particular o a una clase. Los métodos son una de las características clave de la POO y se utilizan para representar el comportamiento de los objetos y las operaciones que pueden realizar.
@@ -986,6 +953,95 @@ C#:
 ```cs
 // Ticket #11: Agregar ejemplo de sobrecarga de operadores en C#
 ```
+
+#### Práctica: Contribuir con el proyecto de documentación
+
+Instrucciones:
+
+1. Abra una terminal
+2. Si aun no tiene su carpeta de proyectos, ejecute el siguiente comando
+
+```
+mkdir -p ~/projects/tecnm/programacion-orientada-a-objetos
+```
+
+3. Entre a su carpeta de proyectos
+
+```
+cd ~/projects/tecnm/programacion-orientada-a-objetos
+```
+
+5. Clone el repositorio de la documentación de la materia
+
+```
+git clone https://github.com/TecnologicoDeDelicias/programacion-orientada-a-objetos.git documentacion-materia
+```
+
+6. Entre a la carpeta de la documentación de la materia recién creada
+
+```
+cd documentacion-materia
+```
+
+7. Verifique que se encuentra dentro del branch main
+
+```
+git branch
+```
+
+8. Presione la tecla `q` para salir del comando anterior
+9. Configure su nombre de usuario y correo electrónico
+
+```
+git config user.name "Nombre Apellido"
+git config user.email "correo"
+```
+
+> Usar la opción `--global` en caso de que aplique para todos los proyectos 10. Vaya a la [sección de issues](https://github.com/TecnologicoDeDelicias/programacion-orientada-a-objetos/issues) de la documentación y seleccione un ticket asignándolo a su usuario en Github
+
+11. Cree un branch usando como referencia el número de ticket y descripción
+
+```
+git checkout -b 123-descripcion-corta
+```
+
+12. Modifique la sección del README que hace referencia su ticket según lo solicitado
+
+13. Haga un commit de sus cambios con el siguiente formato:
+
+```
+git commit -m "Ticket #123: Descripción de los cambios"
+```
+
+14. Haga un push de su branch utilizando el siguiente comando:
+
+```
+git push --set-upstream origin $(git_current_branch)
+```
+
+15. Del comando anterior va a mostrarle una URL para crear un Pull Request. Copie y pegue dicha URL en un navegador.
+
+16. En el título del Pull Request ingrese el mismo mensaje que el commit del paso 13.
+
+17. En el comentario del Pull Request agregue una descripción breve de los cambios.
+
+18. En la lista de revisores (Reviewers) seleccione al profesor y a algún compañero de clase.
+
+19. En el campo de Asignado (Assignee) seleccione su propio usuario.
+
+20. Asegure que el branch destino sea main, revise los cambios y de clic en el botón **Create Pull Request**.
+
+21. Notifique a los revisores del Pull Request la URL del mismo y espere por la retroalimentación
+
+22. En caso de recibir feedback, realice los cambios solicitados, haga un nuevo commit y un push
+
+```
+git add .
+git commit -m "Ticket #123: Cambios propuestos en Pull Request"
+git push
+```
+
+23. Una vez aprobados los cambios por los revisores procedemos a hacer Merge dado clic en el botón de **Merge Pull Request**
 
 ## Unidad 3: Herencia
 
