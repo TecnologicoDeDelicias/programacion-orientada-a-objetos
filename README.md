@@ -998,7 +998,9 @@ git config user.name "Nombre Apellido"
 git config user.email "correo"
 ```
 
-> Usar la opción `--global` en caso de que aplique para todos los proyectos 10. Vaya a la [sección de issues](https://github.com/TecnologicoDeDelicias/programacion-orientada-a-objetos/issues) de la documentación y seleccione un ticket asignándolo a su usuario en Github
+> Usar la opción `--global` en caso de que aplique para todos los proyectos 
+
+10. Vaya a la [sección de issues](https://github.com/TecnologicoDeDelicias/programacion-orientada-a-objetos/issues) de la documentación y seleccione un ticket asignándolo a su usuario en Github
 
 11. Cree un branch usando como referencia el número de ticket y descripción
 
