@@ -754,7 +754,7 @@ Ruby:
 
 ```ruby
 class Boton
-# Aqui va el código solicitado
+# Cambios propuestos en el pull request
 end
 ```
 
