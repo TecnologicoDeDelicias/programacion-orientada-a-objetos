@@ -360,7 +360,7 @@ public class Programa {
 }
 ```
 
-En este ejemplo, es posible escribir directamente los valores de los atributos por cualquier valor sin que existan restricciones, como es el caso del atributo vive, que puede ser modificado una vez que el método morir ha sido ejecutado.
+En este ejemplo, es posible escribir directamente los valores de los atributos por cualquier valor sin que existan restricciones, como es el caso del atributo `vive`, que puede ser modificado una vez que el método morir ha sido ejecutado.
 
 Una mejor manera de escribir las clases es mantener los atributos privados y sólo tener métodos para acceder a ellos para agregar las validaciones correspondientes.
 
@@ -400,13 +400,13 @@ public class Programa {
 }
 ```
 
-En esta nueva versión de la clase Persona, los atributos son acompañados de la palabra clave private, la cual nos indica que solamente pueden ser accedidos dentro de la misma clase, pero no fuera de ella, y solo es posible interactuar a traves de los métodos de la misma.
+En esta nueva versión de la clase `Persona`, los atributos son acompañados de la palabra clave `private`, la cual nos indica que solamente pueden ser accedidos dentro de la misma clase, pero no fuera de ella, y solo es posible interactuar a traves de los métodos de la misma.
 
 #### Práctica: Crear la clase Persona en diferentes lenguajes
 
 Instrucciones
 
-1. Crear una carpeta llamada practicas/unidad2 en el repositorio personal
+1. Crear una carpeta llamada `practicas/unidad2` en el repositorio personal
 2. Dentro de la carpeta crear las siguientes carpetas y archivos correspondientes:
 
    - :file_folder: java
@@ -854,7 +854,7 @@ Ruby:
 
 La sobrecarga de operadores o también llamada "Operator Overloading" es una funcionalidad que algunos lenguajes utilizan para definir más de una operación para un operador dado.
 
-El ejemplo más común es el operador +, que dependiendo de los operandos, realiza una funcionalidad distinta.
+El ejemplo más común es el operador `+`, que dependiendo de los operandos, realiza una funcionalidad distinta.
 
 Veamos un ejemplo en Java:
 
@@ -972,72 +972,73 @@ mkdir -p ~/projects/tecnm/programacion-orientada-a-objetos
 cd ~/projects/tecnm/programacion-orientada-a-objetos
 ```
 
-5. Clone el repositorio de la documentación de la materia
+4. Clone el repositorio de la documentación de la materia
 
 ```
 git clone https://github.com/TecnologicoDeDelicias/programacion-orientada-a-objetos.git documentacion-materia
 ```
+
 > En caso de usar SSH utilizar el comando `git clone git@github.com:TecnologicoDeDelicias/programacion-orientada-a-objetos.git documentacion-materia`
 
-6. Entre a la carpeta de la documentación de la materia recién creada
+5. Entre a la carpeta de la documentación de la materia recién creada
 
 ```
 cd documentacion-materia
 ```
 
-7. Verifique que se encuentra dentro del branch main
+6. Verifique que se encuentra dentro del branch main
 
 ```
 git branch
 ```
 
-8. Presione la tecla `q` para salir del comando anterior
-9. Configure su nombre de usuario y correo electrónico
+7. Presione la tecla `q` para salir del comando anterior
+8. Configure su nombre de usuario y correo electrónico
 
 ```
 git config user.name "Nombre Apellido"
 git config user.email "correo"
 ```
 
-> Usar la opción `--global` en caso de que aplique para todos los proyectos 
+> Usar la opción `--global` en caso de que aplique para todos los proyectos
 
-10. Vaya a la [sección de issues](https://github.com/TecnologicoDeDelicias/programacion-orientada-a-objetos/issues) de la documentación y seleccione un ticket asignándolo a su usuario en Github
+9. Vaya a la [sección de issues](https://github.com/TecnologicoDeDelicias/programacion-orientada-a-objetos/issues) de la documentación y seleccione un ticket asignándolo a su usuario en Github
 
-11. Cree un branch usando como referencia el número de ticket y descripción
+10. Cree un branch usando como referencia el número de ticket y descripción
 
 ```
 git checkout -b 123-descripcion-corta
 ```
 
-12. Modifique la sección del README que hace referencia su ticket según lo solicitado
+11. Modifique la sección del `README.md` que hace referencia su ticket según lo solicitado
 
-13. Haga un commit de sus cambios con el siguiente formato:
+12. Haga un commit de sus cambios con el siguiente formato:
 
 ```
 git commit -m "Ticket #123: Descripción de los cambios"
 ```
 
-14. Haga un push de su branch utilizando el siguiente comando:
+13. Haga un push de su branch utilizando el siguiente comando:
 
 ```
 git push --set-upstream origin $(git_current_branch)
 ```
 
-15. Del comando anterior va a mostrarle una URL para crear un Pull Request. Copie y pegue dicha URL en un navegador.
+14. Del comando anterior va a mostrarle una URL para crear un Pull Request. Copie y pegue dicha URL en un navegador.
 
-16. En el título del Pull Request ingrese el mismo mensaje que el commit del paso 13.
+15. En el título del Pull Request ingrese el mismo mensaje que el commit del paso 12.
 
-17. En el comentario del Pull Request agregue una descripción breve de los cambios.
+16. En el comentario del Pull Request agregue una descripción breve de los cambios.
 
-18. En la lista de revisores (Reviewers) seleccione al profesor y a algún compañero de clase.
+17. En la lista de revisores (Reviewers) seleccione al profesor y a algún compañero de clase.
 
-19. En el campo de Asignado (Assignee) seleccione su propio usuario.
+18. En el campo de Asignado (Assignee) seleccione su propio usuario.
 
-20. Asegure que el branch destino sea main, revise los cambios y de clic en el botón **Create Pull Request**.
+19. Asegure que el branch destino sea main, revise los cambios y de clic en el botón **Create Pull Request**.
 
-21. Notifique a los revisores del Pull Request la URL del mismo y espere por la retroalimentación
+20. Notifique a los revisores del Pull Request la URL del mismo y espere por la retroalimentación
 
-22. En caso de recibir feedback, realice los cambios solicitados, haga un nuevo commit y un push
+21. En caso de recibir feedback, realice los cambios solicitados, haga un nuevo commit y un push
 
 ```
 git add .
@@ -1045,7 +1046,7 @@ git commit -m "Ticket #123: Cambios propuestos en Pull Request"
 git push
 ```
 
-23. Una vez aprobados los cambios por los revisores procedemos a hacer Merge dado clic en el botón de **Merge Pull Request**
+22. Una vez aprobados los cambios por los revisores procedemos a hacer Merge dado clic en el botón de **Merge Pull Request**
 
 ## Unidad 3: Herencia
 
