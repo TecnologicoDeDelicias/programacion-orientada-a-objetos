@@ -40,6 +40,8 @@ Esta asignatura aporta al perfil del Ingeniero la capacidad de analizar, desarro
   - [6.2 Clasificación: Archivos de texto y binarios](#62-clasificación-archivos-de-texto-y-binarios)
   - [6.3 Operaciones básicas y tipos de acceso](#63-operaciones-básicas-y-tipos-de-acceso)
   - [6.4 Manejo de objetos persistentes](#64-manejo-de-objetos-persistentes)
+- [Anexos](#anexos)
+  - [Tabla comparativa de Lenguajes de Programación](#tabla-comparativa-de-lenguajes-de-programación)
 
 ## Plan de trabajo
 
@@ -977,6 +979,7 @@ cd ~/projects/tecnm/programacion-orientada-a-objetos
 ```
 git clone https://github.com/TecnologicoDeDelicias/programacion-orientada-a-objetos.git documentacion-materia
 ```
+
 > En caso de usar SSH utilizar el comando `git clone git@github.com:TecnologicoDeDelicias/programacion-orientada-a-objetos.git documentacion-materia`
 
 6. Entre a la carpeta de la documentación de la materia recién creada
@@ -999,7 +1002,7 @@ git config user.name "Nombre Apellido"
 git config user.email "correo"
 ```
 
-> Usar la opción `--global` en caso de que aplique para todos los proyectos 
+> Usar la opción `--global` en caso de que aplique para todos los proyectos
 
 10. Vaya a la [sección de issues](https://github.com/TecnologicoDeDelicias/programacion-orientada-a-objetos/issues) de la documentación y seleccione un ticket asignándolo a su usuario en Github
 
@@ -1142,3 +1145,14 @@ Tema por desarrollar
 ### 6.4 Manejo de objetos persistentes
 
 Tema por desarrollar
+
+## Anexos
+
+### Tabla comparativa de Lenguajes de Programación
+
+|                      | Java          | Python           | Ruby                      | Javascript   | C++               |
+| -------------------- | ------------- | ---------------- | ------------------------- | ------------ | ----------------- |
+| **Primer aparición** | 1995          | Finales 80'      | 1995                      | 1995         | 1983              |
+| **Creador**          | James Gosling | Guido van Rossum | Yukihiro "Matz" Matsumoto | Brendan Eich | Bjarne Stroustrup |
+| **Tipo**             | Compilado     | Interpretado     | Interpretado              | Interpretado | Compilado         |
+| **Tipado**           | Fuerte        | Débil            | Débil                     | Débil        | Fuerte            |
