@@ -767,6 +767,19 @@ C++:
 
 ```cpp
 // Ticket #7: Agregar ejemplo en C++
+class Boton {
+public:
+  //Constuctor por defecto
+  Boton() : texto("BotonSA"), alto(100), ancho(100){}
+
+  //Constructor con argumentos
+  Boton(std::String txt, int al, int an) : texto(txt), alto(al), ancho(an){ }
+
+}
+//uso
+Boton botonSinArgumentos; //Usa el constructor sin argumentos
+Boton botonConArgumentos("botonCA",200,200); //usa el constructor con argumentos
+
 ```
 
 #### Destructor
