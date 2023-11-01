@@ -761,11 +761,11 @@ Javascript:
 
 ```js
 class Boton {
-    constructor(texto = "Boton", alto=200, ancho = 400) {
+  constructor(texto = "Boton", alto = 200, ancho = 400) {
     this.texto = texto;
     this.alto = alto;
     this.ancho = ancho;
-}
+  }
 }
 const botonSimple = new Boton();
 console.log(botonSimple);
