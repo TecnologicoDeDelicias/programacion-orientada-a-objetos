@@ -878,9 +878,7 @@ class EjemploSobrecarga
     when 1
       metodo_con_un_parametro(args[0])
     when 2
-      metodo_con_dos_parametros(args[0], args[1])
-    else
-      raise ArgumentError, "Número de argumentos inválido"
+      metodo_con_dos_parametros(args[0], args[1])  
     end
   end
 
