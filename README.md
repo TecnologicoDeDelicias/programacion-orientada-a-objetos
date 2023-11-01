@@ -841,7 +841,49 @@ class Reservacion {
 Python:
 
 ```python
-# Ticket #9: Agregar ejemplo de sobrecarga de métodos en Python
+class perro;
+nombre = ""
+color_pelo = ""
+color_ojos = ""
+edad = 0
+hambre = 0.0
+energia = 0.0
+
+# Constructor:
+def_init_(self, nombre, color, color_pelo, color_ojos, edad, hambre, energia):
+  self.nombre = nombre
+  self.color_pelo = color_pelo
+  self.color_ojos = color_ojos
+  self.edad = edad
+  self.hambre = hambre
+  self.energia = energia
+
+  def __add__(self, nuevo_perro):
+    return perro("Sin nombre", self.color_pelo, nuevo_perro.color.ojos, 0, 0, 0)
+
+
+  def ladrar(self):
+    print("guau, guau")
+    def comer(self, numero_croquetas):
+      self.hambre = self. hambre = (0.1) + numero_croquetas
+
+      def jugar(self, minutos_de_juego):
+        if self.nergia > 0:
+          self.hambre = self.hambre + (0.05) + minutos_de_juego
+          self.energia = self.energia - (0.1) + minutos_de_juego
+          else:
+            print("El perro ya esta cansado y quiere dormir")
+
+ #Programa en ejecucion
+ firulais = perro("firulais", "cafe", "cafes", 3, 0.0, 1.0)
+ daysi = perro("daysi", "blanca", "cafes", 1, 0.0, 1.0)
+ # Que pasa si agrego un nuevo perro?, de la suma de firulais y daysi , esto me marcaria un error porque la operacion aritmetica no esta soportada, se agrega soporte en linea 860
+ nuevo_perro = firulais + daysi
+ print (otro_perro.nombre)
+#al corrrer el programa ya con el operador definido, se esperaria un nuevo perro pero sin nombre 
+
+
+
 ```
 
 Ruby:
