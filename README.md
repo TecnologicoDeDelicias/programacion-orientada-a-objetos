@@ -872,7 +872,33 @@ System.out.println(resultado2);
 Ruby:
 
 ```ruby
-# Ticket #12: Agregar ejemplo de sobrecarga de operadores en Ruby
+class EjemploSobrecarga
+  def ejemplo(*args)
+    case args.size
+    when 1
+      metodo_con_un_parametro(args[0])
+    when 2
+      metodo_con_dos_parametros(args[0], args[1])
+    else
+      raise ArgumentError, "Número de argumentos inválido"
+    end
+  end
+
+  def metodo_con_un_parametro(parametro)
+    puts "Método con un parámetro: #{parametro}"
+  end
+
+  def metodo_con_dos_parametros(parametro1, parametro2)
+    puts "Método con dos parámetros: #{parametro1} y #{parametro2}"
+  end
+end
+
+# Uso de la clase
+ejemplo = EjemploSobrecarga.new
+ejemplo.ejemplo("Un solo parámetro")
+ejemplo.ejemplo("Primer parámetro", "Segundo parámetro")
+#ejemplo.ejemplo("Primer parámetro", "Segundo parámetro", "Tercer parámetro") # Esto arrojará un ArgumentError
+#Es importante señalar que esta técnica no es una verdadera sobrecarga de métodos, ya que estoy definiendo un solo método (ejemplo) que se comporta de manera diferente según los argumentos que recibe. En Ruby, se prefiere el uso de argumentos opcionales y valores por defecto en lugar de sobrecargar métodos, ya que es más consistente con la filosofía del lenguaje.
 ```
 
 Javascript:
