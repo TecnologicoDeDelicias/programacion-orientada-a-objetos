@@ -760,7 +760,24 @@ Ruby:
 Javascript:
 
 ```js
-// Ticket #6: Agregar ejemplo en Javascript
+class Boton {
+    constructor(texto = "Boton", alto=200, ancho = 400) {
+    this.texto = texto;
+    this.alto = alto;
+    this.ancho = ancho;
+}
+}
+const botonSimple = new Boton();
+console.log(botonSimple);
+
+const botonDeTexto = new Boton("Mi boton coloca el texto");
+console.log(botonDeTexto);
+
+const botonDe1Valor = new Boton("Mi boton tiene un valor", 150);
+console.log(botonDe1Valor);
+
+const botonDe2Valores = new Boton("Mi boton tiene 2 valores", 200, 86);
+console.log(botonDe2Valores);
 ```
 
 C++:
