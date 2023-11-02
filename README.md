@@ -40,6 +40,8 @@ Esta asignatura aporta al perfil del Ingeniero la capacidad de analizar, desarro
   - [6.2 Clasificación: Archivos de texto y binarios](#62-clasificación-archivos-de-texto-y-binarios)
   - [6.3 Operaciones básicas y tipos de acceso](#63-operaciones-básicas-y-tipos-de-acceso)
   - [6.4 Manejo de objetos persistentes](#64-manejo-de-objetos-persistentes)
+- [Anexos](#anexos)
+  - [Tabla comparativa de Lenguajes de Programación](#tabla-comparativa-de-lenguajes-de-programación)
 
 ## Plan de trabajo
 
@@ -1143,3 +1145,14 @@ Tema por desarrollar
 ### 6.4 Manejo de objetos persistentes
 
 Tema por desarrollar
+
+## Anexos
+
+### Tabla comparativa de Lenguajes de Programación
+
+|                      | Java          | Python           | Ruby                      | Javascript   | C++               |
+| -------------------- | ------------- | ---------------- | ------------------------- | ------------ | ----------------- |
+| **Primer aparición** | 1995          | Finales 80'      | 1995                      | 1995         | 1983              |
+| **Creador**          | James Gosling | Guido van Rossum | Yukihiro "Matz" Matsumoto | Brendan Eich | Bjarne Stroustrup |
+| **Tipo**             | Compilado     | Interpretado     | Interpretado              | Interpretado | Compilado         |
+| **Tipado**           | Fuerte        | Débil            | Débil                     | Débil        | Fuerte            |
