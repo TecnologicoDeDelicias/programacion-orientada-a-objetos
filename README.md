@@ -362,6 +362,30 @@ public class Programa {
 }
 ```
 
+Python:
+
+```python
+# Ticket #28
+```
+
+Ruby:
+
+```ruby
+# Ticket #29
+```
+
+Javascript:
+
+```js
+// Ticket #30
+```
+
+C++:
+
+```cpp
+// Ticket #31
+```
+
 En este ejemplo, es posible escribir directamente los valores de los atributos por cualquier valor sin que existan restricciones, como es el caso del atributo `vive`, que puede ser modificado una vez que el método morir ha sido ejecutado.
 
 Una mejor manera de escribir las clases es mantener los atributos privados y sólo tener métodos para acceder a ellos para agregar las validaciones correspondientes.
@@ -400,6 +424,30 @@ public class Programa {
     juan.saludar();
   }
 }
+```
+
+Python:
+
+```python
+# Ticket #32
+```
+
+Ruby:
+
+```ruby
+# Ticket #33
+```
+
+Javascript:
+
+```js
+// Ticket #35
+```
+
+C++:
+
+```cpp
+// Ticket #36
 ```
 
 En esta nueva versión de la clase `Persona`, los atributos son acompañados de la palabra clave `private`, la cual nos indica que solamente pueden ser accedidos dentro de la misma clase, pero no fuera de ella, y solo es posible interactuar a traves de los métodos de la misma.
@@ -551,6 +599,18 @@ end
 
 ```
 
+Javascript:
+
+```js
+// Ticket #37
+```
+
+C++:
+
+```cpp
+// Ticket #38
+```
+
 ### 2.4 Métodos: declaración, mensajes, paso de parámetros, retorno de valores
 
 En la programación orientada a objetos (POO), un método es una función o procedimiento asociado a un objeto particular o a una clase. Los métodos son una de las características clave de la POO y se utilizan para representar el comportamiento de los objetos y las operaciones que pueden realizar.
@@ -687,6 +747,24 @@ gusta_brocoli = juan.me_gusta(brocoli);
 Persona.metodo_de_clase()
 juan.metodo_de_clase
 
+```
+
+Ruby:
+
+```ruby
+# Ticket #39
+```
+
+Javascript:
+
+```js
+// Ticket #40
+```
+
+C++:
+
+```cpp
+// Ticket #41
 ```
 
 ### 2.5 Constructores y destructores declaración, uso y aplicaciones
