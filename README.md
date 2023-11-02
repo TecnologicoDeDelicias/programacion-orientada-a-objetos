@@ -853,7 +853,27 @@ class Reservacion {
 C++:
 
 ```cpp
-// Ticket #8: Agregar ejemplo de sobrecarga de métodos en C++
+#include <iostream>
+
+class EjemploSobrecarga {
+public:
+    void mostrar(int numero) {
+        std::cout << "Número: " << numero << std::endl;
+    }
+
+    void mostrar(std::string texto) {
+        std::cout << "Texto: " << texto << std::endl;
+    }
+};
+
+int main() {
+    EjemploSobrecarga objeto;
+
+    objeto.mostrar(42);
+    objeto.mostrar("Hola, sobrecarga!");
+
+    return 0;
+}
 ```
 
 En Python, Ruby o Javascript no existe el concepto como tal, si no que se tendría que determinar el tipo de dato dentro del método
