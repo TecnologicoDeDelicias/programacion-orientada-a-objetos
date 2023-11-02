@@ -766,20 +766,39 @@ Javascript:
 C++:
 
 ```cpp
-// Ticket #7: Agregar ejemplo en C++
+#include <iostream>
+
+#include <string>
+
 class Boton {
-public:
-  //Constuctor por defecto
-  Boton() : texto("BotonSA"), alto(100), ancho(100){}
+  private: std::string texto;
+  private: int alto;
+  private: int ancho;
+  public:
+    // Constuctor por defecto
+    Boton(): texto("BotonSA"),
+  alto(100),
+  ancho(100) {}
+  // Constructor con argumentos
+  Boton(std::string txt, int al, int an): texto(txt),
+  alto(al),
+  ancho(an) {}
 
-  //Constructor con argumentos
-  Boton(std::String txt, int al, int an) : texto(txt), alto(al), ancho(an){ }
-
+  void imprimirDatos() {
+    std::cout << "Texto: " << texto << std::endl;
+    std::cout << "Alto: " << alto << std::endl;
+    std::cout << "Ancho: " << ancho << std::endl;
+  }
+};
+int main() {
+  // Usa el constructor sin argumentos
+  Boton botonSinArgumentos;
+  botonSinArgumentos.imprimirDatos();
+  // usa el constructor con argumentos
+  Boton botonConArgumentos("botonCA", 200, 200);
+  botonConArgumentos.imprimirDatos();
+  return 0;
 }
-//uso
-Boton botonSinArgumentos; //Usa el constructor sin argumentos
-Boton botonConArgumentos("botonCA",200,200); //usa el constructor con argumentos
-
 ```
 
 #### Destructor
