@@ -65,7 +65,7 @@ Los detalles de la materia así como el plan de trabajo pueden ser consultados e
 ### Material de apoyo
 
 - [Taller de Git](https://github.com/DevelopersDelicias/git-workshop-2021/tree/main)
-- [Canal de Youtube](https://www.youtube.com/@benjamincisneros797/videos)
+- [Canal de YouTube](https://www.youtube.com/@benjamincisneros797/videos)
 - [Dev Docs](https://devdocs.io/)
 
 ## Unidad 1: Introducción al paradigma de la programación orientada a objetos
@@ -96,11 +96,11 @@ La **abstracción** es el proceso de definir el grado de detalle que una clase d
 
 ![Ejemplo de Abstracción](./docs/images/abstraccion-concepto.jpeg)
 
-La **modularidad** se refiere al proceso de dividir un sistema complejo en diferentes subelementos (módulos) que contemplan funciones o características afines.
+La **modularidad** se refiere al proceso de dividir un sistema complejo en diferentes sub-elementos (módulos) que contemplan funciones o características afines.
 
 ![Ejemplo de Modularidad](./docs/images/modularidad-concepto.jpeg)
 
-El **encapsulamiento** es el proceso por el cual ciertos detalles de implementación son ocultados al usuario final y solamente se muestra lo necesario para poder interctuar con los objetos y/o clases.
+El **encapsulamiento** es el proceso por el cual ciertos detalles de implementación son ocultados al usuario final y solamente se muestra lo necesario para poder interactuar con los objetos y/o clases.
 
 ![Ejemplo de Encapsulamiento](./docs/images/encapsulamiento-concepto.jpeg)
 
@@ -794,20 +794,16 @@ class Boton {
   private: int alto;
   private: int ancho;
   public:
-    // Constuctor por defecto
-    Boton(): texto("BotonSA"),
-  alto(100),
-  ancho(100) {}
-  // Constructor con argumentos
-  Boton(std::string txt, int al, int an): texto(txt),
-  alto(al),
-  ancho(an) {}
+    // Constructor por defecto
+    Boton(): texto("BotonSA"), alto(100), ancho(100) {}
+    // Constructor con argumentos
+    Boton(std::string txt, int al, int an): texto(txt), alto(al), ancho(an) {}
 
-  void imprimirDatos() {
-    std::cout << "Texto: " << texto << std::endl;
-    std::cout << "Alto: " << alto << std::endl;
-    std::cout << "Ancho: " << ancho << std::endl;
-  }
+    void imprimirDatos() {
+      std::cout << "Texto: " << texto << std::endl;
+      std::cout << "Alto: " << alto << std::endl;
+      std::cout << "Ancho: " << ancho << std::endl;
+    }
 };
 int main() {
   // Usa el constructor sin argumentos
