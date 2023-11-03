@@ -1097,7 +1097,48 @@ class NumeroComplejo:
 C#:
 
 ```cs
-// Ticket #11: Agregar ejemplo de sobrecarga de operadores en C#
+using System;
+
+class NumeroComplejo
+{
+    private int real;
+    private int imaginaria;
+
+    public NumeroComplejo(int real, int imaginaria)
+    {
+        this.real = real;
+        this.imaginaria = imaginaria;
+    }
+
+    public void Imprimir()
+    {
+        Console.WriteLine("(" + this.real + ", " + this.imaginaria + ")");
+        Console.WriteLine();
+    }
+
+    public static NumeroComplejo operator +(NumeroComplejo a, NumeroComplejo b)
+    {
+        return new NumeroComplejo(a.real + b.real, a.imaginaria + b.imaginaria);
+    }
+}
+
+public class Programa
+{
+    public static void Main(string[] args)
+    {
+        NumeroComplejo c1 = new NumeroComplejo(10, 20);
+        NumeroComplejo c2 = new NumeroComplejo(20, 30);
+        NumeroComplejo suma = c1 + c2;
+        c1.Imprimir();
+        c2.Imprimir();
+        suma.Imprimir();
+
+        // salida
+        // (10, 20)
+        // (20, 30)
+        // (30, 50)
+    }
+}
 ```
 
 #### Práctica: Contribuir con el proyecto de documentación
