@@ -834,7 +834,28 @@ if __name__ == "__main__":
 Ruby:
 
 ```ruby
-# Ticket #5: Agregar ejemplo en Ruby
+# Boton.rb
+class Boton
+  def initialize(texto = "Boton", alto = "100", ancho = 200)
+    @texto = texto
+    @alto = alto
+    @ancho = ancho
+  end
+
+  def imprimir_datos()
+    puts("Texto='#{@texto}', Alto=#{@alto}, Ancho=#{@ancho}")
+  end
+end
+
+# main.rb
+botonSimple = Boton.new()
+botonSimple.imprimir_datos()
+
+botonSoloTexto = Boton.new("Boton sólo texto")
+botonSoloTexto.imprimir_datos()
+
+botonTodosLosArgumentos = Boton.new("Boton con todos los argumentos", 30, 40)
+botonTodosLosArgumentos.imprimir_datos()
 ```
 
 Javascript:
