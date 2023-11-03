@@ -876,14 +876,11 @@ class Perro:
         print("El perro ya esta cansado y quiere dormir")
 
 # Programa en ejecución
-firulais = Perro("Firulais", "cafe", "cafes", 3, 0.0, 1.0)
-daisy = Perro("Daisy", "blanca", "cafes", 1, 0.0, 1.0)
+firulais = Perro("Firulais", "cafe", "cafes", 3, 0.0, 1.0
+firulais.comer(20))
 
-# Que pasa si agrego un nuevo perro?, de la suma de firulais y daisy , esto me marcaría un error porque la operación aritmética no esta soportada, se agrega soporte en linea 860
-nuevo_perro = firulais + daisy
-# al correr el programa ya con el operador definido, se esperaría un nuevo perro pero sin nombre 
-print (nuevo_perro.nombre)
-
+{
+}
 ```
 
 Ruby:
