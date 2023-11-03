@@ -841,47 +841,29 @@ class Reservacion {
 Python:
 
 ```python
-class Perro:
-  nombre = ""
-  color_pelo = ""
-  color_ojos = ""
-  edad = 0
-  hambre = 0.0
-  energia = 0.0
+class Firulais:
 
-  # Constructor:
-  def __init__(self, nombre, color_pelo, color_ojos, edad, hambre, energia):
-    self.nombre = nombre
-    self.color_pelo = color_pelo
-    self.color_ojos = color_ojos
-    self.edad = edad
-    self.hambre = hambre
-    self.energia = energia
+nombre = ""
+    edad = 0
+    comer = 15 croquetas
+   # Constructor:
+  def __init__(self, nombre,  edad):
+    self.nombre = nombre  
+       self.edad = edad
+   
+   def ladrar(self):
+    print("Guau guau ")
+      
 
-  def __add__(self, nuevo_perro):
-    return Perro("Sin nombre", self.color_pelo, nuevo_perro.color_ojos, 0, 0, 0)
-
-
-  def ladrar(self):
-    print("guau, guau")
+  def comer(self, comer):
+    self.comer = comer
   
-  def comer(self, numero_croquetas):
-      self.hambre = self.hambre * 0.1 + numero_croquetas
-
-  def jugar(self, minutos_de_juego):
-    if self.energia > 0:
-        self.hambre = self.hambre + (0.05) + minutos_de_juego
-        self.energia = self.energia - (0.1) + minutos_de_juego
-    else:
-        print("El perro ya esta cansado y quiere dormir")
-
-# Programa en ejecución
-firulais = Perro("Firulais", "cafe", "cafes", 3, 0.0, 1.0
-firulais.comer(20))
-
-{
-}
-```
+    
+    # Programa en ejecución
+firulais = Firulais("firulais", "3")
+firulais.edad()
+firulais.comer()
+{}
 
 Ruby:
 
