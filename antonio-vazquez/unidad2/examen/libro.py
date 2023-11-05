@@ -1,5 +1,5 @@
 class Libro:
-    def _init_(self, titulo, autor, numeroDePaginas, precio = 100, disponible = True):
+    def __init__(self, titulo, autor, numeroDePaginas, precio = 100, disponible = True):
         self.titulo = titulo
         self.autor = autor
         self.numeroDePaginas = numeroDePaginas
