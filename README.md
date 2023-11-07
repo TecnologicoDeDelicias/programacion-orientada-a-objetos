@@ -1261,7 +1261,55 @@ Esta unidad tiene como propósito la creación de objetos que incorporen propied
 
 ### 3.1 Definición: Clase base, Clase derivada
 
-Tema por desarrollar
+Cuando pensamos en las clases y objetos que forman parte de cualquier contexto, es posible que encontremos similitudes entre las mismas, llegando el punto que una gran parte de ciertos atributos y métodos son idénticos o contienen un patrón similar.
+
+Por ejemplo, imaginemos una aplicación que contiene elementos de interfaz gráfica, como puede ser botones, etiquetas, cuadros de texto, etc..
+
+Claramente podemos deducir que dichos elementos tienen diferencias notables en la manera en que se muestren al usuario, y la forma en que este interactúa con ellos. Pero de igual manera, es posible que ciertos atributos y métodos se repitan como `nombre`, `texto`, `alto` y `dibujar`, entre otros.
+
+Es por ello que es posible crear una nueva clase que contenga dichos atributos y métodos repetidos y hacer que las clases hereden de esta para eliminar dicha duplicidad.
+
+Se le denomina **Clase Base** a la clase que contiene un mayor grado de abstracción que otra, y está es usada como punto inicial para crear otras clases. En nuestro ejemplo, sería la clase `ComponenteInterfazGrafica`.
+
+Por otro lado, a una ckase que hereda los atributos y métodos de otra es denominada como **Clase Derivada**. Siguiendo nuestro ejemplo anterior serían las clases `Boton`, `Etiqueta` y `CuadroDeTexto`.
+
+En Java, todas las clases heredan de manera implícita de la clase `Object`, la cual contiene algunos métodos base que todo objeto puede acceder de manera predeterminada.
+
+Veamos ahora algunos ejemplos de como crear clases base y derivadas en los diferentes lenguajes.
+
+Java:
+
+```java
+class Base {}
+
+class Derivada extends Base {}
+```
+
+Python:
+
+```python
+class Base:
+  pass
+
+class Derivada(Base):
+  pass
+```
+
+Ruby:
+
+```ruby
+class Base {}
+
+class Derivada extends Base {}
+```
+
+C++:
+
+```cpp
+class Base {};
+
+class Derivada: public Base {};
+```
 
 ### 3.2 Clasificación: herencia simple, herencia múltiple
 
