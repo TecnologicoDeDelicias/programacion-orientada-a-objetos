@@ -1334,7 +1334,60 @@ En lenguajes derivados o inspirados en C y C++, tales como Java, C# y Objective-
 
 ### 3.3 Reutilización de miembros heredados
 
-Tema por desarrollar
+Como se ha mencionado en el tema 3.1, una de las finalidades de implementar el mecanismo de herencia dentro de POO, es la reutilización de código. Veamos algunos ejemplos en los diferentes lenguajes:
+
+Java:
+
+```java
+class Persona {
+  void saludar() {
+    System.out.println("Hola, soy una persona");
+  }
+}
+
+class Estudiante extends Persona {
+  void estudiar() {
+    System.out.println("Estoy estudiando!!");
+  }
+}
+
+class Docente extends Persona {
+  void darClase() {
+    System.out.println("Estoy dando clases!!");
+  }
+}
+
+class Main {
+  public static void main(String[] args) {
+    Persona persona = new Persona();
+    Estudiante estudiante = new Estudiante();
+    Docente docente = new Docente();
+
+    persona.saludar();
+    estudiante.saludar();
+    docente.saludad();
+
+    // Todos imprimen "Hola, soy una persona"
+
+    estudiante.estudiar();
+    // ---> "Estoy estudiando!!"
+
+    docente.darClase();
+    // ---> "Estoy dando clases!!"
+
+    // las siguientes lineas no compilarían
+    // persona.estudiar(); // <-- la clase Persona no tiene el método estudiar
+    // estudiante.darClase(); // <-- la clase Estudiante no tiene el método darClase
+
+    // Todas las clases derivan directa o indirectamente de la clase Object
+
+    System.out.println(persona.getClass().getName());
+    System.out.println(estudiante.getClass().getName());
+    System.out.println(docente.getClass().getName());
+  }
+}
+
+```
 
 ### 3.4 Referencia al objeto de la clase base
 
