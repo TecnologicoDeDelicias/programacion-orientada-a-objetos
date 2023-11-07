@@ -1405,18 +1405,19 @@ class Persona {
 }
 
 class Estudiante extends Persona {
-  void saludar() {
-    System.out.println("Saludo como Estudiante");
 
+  void estudiar() {
     // Podemos mandar a llamar al saludar de Persona utilizando la palabra reservada "super"
+    // Aunque técnicamente no es necesario
     super.saludar();
+    System.out.println("Estudiando duro para no reprobar...");
   }
 }
 
 class Main {
   public static void main(String[] args) {
     Estudiante estudiante = new Estudiante();
-    estudiante.saludar();
+    estudiante.estudiar();
   }
 }
 ```
@@ -1485,7 +1486,52 @@ Cuando el recolector de basura invoca al destructor de un objeto de una clase de
 
 ### 3.6 Redefinición de métodos en clases derivadas
 
-Tema por desarrollar
+Una de las posibilidades que la herencia nos permite es poder redefinir el comportamiento de las clases bases en una clase derivada. Esto se conoce como **Sobre-escritura de métodos** y es una forma de implementar el Polimorfismo, el cuál será explicado con mayor detalle en la unidad 4.
+
+Veamos algunos ejemplos:
+
+Java
+
+```java
+package practicas.unidad3.java;
+
+class Persona {
+  void saludar() {
+    System.out.println("Hola, soy una persona");
+  }
+}
+
+class Docente extends Persona {
+
+  // De manera opcional podemos agregar la anotación Override que indica que el método se ha redefinido
+  @Override
+  void saludar() {
+    System.out.println("Hola, soy un docente");
+    // Para llamar al método de la clase derivada lo podemos hacer utilizando super
+    // super.saludar();
+  }
+}
+
+class Main {
+  public static void main(String[] args) {
+    Persona persona = new Persona();
+    persona.saludar();
+    // --> "Hola, soy una persona"
+
+    Docente docente = new Docente();
+    docente.saludar();
+    // --> "Hola, soy un docente"
+  }
+}
+```
+
+<!-- Ticket #67: Agregar ejemplo en Python -->
+
+<!-- Ticket #68: Agregar ejemplo en Ruby -->
+
+<!-- Ticket #69: Agregar ejemplo en Javascript -->
+
+<!-- Ticket #70: Agregar ejemplo en C++ -->
 
 ## Unidad 4: Polimorfismo
 
