@@ -1431,7 +1431,57 @@ class Main {
 
 ### 3.5 Constructores y destructores en clases derivadas
 
-Tema por desarrollar
+#### 3.5.1 Constructores en clases derivadas
+
+Al instanciar objetos de clases derivadas se inicia una cadena de invocaciones a constructores en las cuales el constructor de la clase derivada, antes de realizar sus propias tareas, invoca (ya sea implícita o explícitamente) al constructor de su clase base. Similarmente, si la clase base fue derivada de otra clase, el constructor de la clase base debe invocar al constructor de la clase ubicada en el siguiente nivel superior de la jerarquía, y así sucesivamente.
+
+Veamos un ejemplo:
+
+Java
+
+```java
+package practicas.unidad3.java;
+
+class Persona {
+  Persona() {
+    System.out.println("Constructor de persona");
+  }
+}
+
+class Estudiante extends Persona {
+  Estudiante() {
+    // aquí se hace una llamada explicita a super(), que es el constructor de la clase base
+
+    System.out.println("Constructor de estudiante");
+  }
+}
+
+class Main {
+  public static void main(String[] args) {
+    new Estudiante();
+
+    // Se imprime
+    // Constructor en Persona
+    // Constructor en Estudiante
+  }
+}
+```
+
+<!-- Ticket #61: Agregar ejemplo en Python -->
+
+<!-- Ticket #62: Agregar ejemplo en Ruby -->
+
+<!-- Ticket #63: Agregar ejemplo en Javascript -->
+
+<!-- Ticket #64: Agregar ejemplo en C++ -->
+
+#### 3.5.2 Destructores en clases derivadas
+
+Cuando remueve de la memoria un objeto de una clase derivada, el recolector de basura invoca al destructor del objeto. Esto inicia una cadena de invocaciones a destructores, en donde el destructor de la clase derivada y los destructores de las clases bases directas e indirectas se ejecutan en orden inverso al que se ejecutaron los constructores, esto es, primero se ejecuta el destructor de la clase derivada y al final se ejecuta el destructor de la clase base ubicada en el nivel superior de la jerarquía. La ejecución de los destructores debe liberar todos los recursos que el objeto adquirió, antes de que el recolector de basura reclame la memoria de ese objeto.
+
+Cuando el recolector de basura invoca al destructor de un objeto de una clase derivada, ese destructor realiza su tarea y después invoca al destructor de la clase base.
+
+<!-- Ticket #65: Agregar ejemplo en C++ -->
 
 ### 3.6 Redefinición de métodos en clases derivadas
 
