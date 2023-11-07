@@ -1391,7 +1391,43 @@ class Main {
 
 ### 3.4 Referencia al objeto de la clase base
 
-Tema por desarrollar
+Similar a lo estudiado en el tema [2.3](#23-referencia-al-objeto-actual), es posible hacer referencia a los miembros definidos en la clase base dentro de la clase derivada. Esto nos permite utilizar dichos miembros explícitamente en caso de que se requiera.
+
+Java:
+
+```java
+package practicas.unidad3.java;
+
+class Persona {
+  void saludar() {
+    System.out.println("Saludo como persona");
+  }
+}
+
+class Estudiante extends Persona {
+  void saludar() {
+    System.out.println("Saludo como Estudiante");
+
+    // Podemos mandar a llamar al saludar de Persona utilizando la palabra reservada "super"
+    super.saludar();
+  }
+}
+
+class Main {
+  public static void main(String[] args) {
+    Estudiante estudiante = new Estudiante();
+    estudiante.saludar();
+  }
+}
+```
+
+<!-- Ticket #56: Agregar ejemplo en Python -->
+
+<!-- Ticket #57: Agregar ejemplo en Ruby -->
+
+<!-- Ticket #58: Agregar ejemplo en Javascript -->
+
+<!-- Ticket #59: Agregar ejemplo en C++ -->
 
 ### 3.5 Constructores y destructores en clases derivadas
 
