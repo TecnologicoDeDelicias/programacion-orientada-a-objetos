@@ -1481,7 +1481,34 @@ const estudiante = new Estudiante();
 estudiante.estudiar();
 ```
 
-<!-- Ticket #59: Agregar ejemplo en C++ -->
+C++:
+
+```cpp
+#include <iostream>
+
+class Persona {
+public:
+    void saludar() {
+        std::cout << "Saludo como persona" << std::endl;
+    }
+};
+
+class Estudiante: public Persona {
+public:
+    void estudiar() {
+        // Podemos invocar el método de la clase base con el nombre de la clase y el operador de ámbito ::
+        Persona::saludar();
+        std::cout << "Estudiando duro para no reprobar..." << std::endl;
+    }
+};
+
+int main() {
+    Estudiante estudiante;
+    estudiante.estudiar();
+
+    return 0;
+}
+```
 
 ### 3.5 Constructores y destructores en clases derivadas
 
