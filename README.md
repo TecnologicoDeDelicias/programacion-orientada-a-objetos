@@ -1422,7 +1422,21 @@ class Main {
 }
 ```
 
-<!-- Ticket #56: Agregar ejemplo en Python -->
+Python:
+
+```python
+class Persona:
+    def saludar(self):
+        print("Saludo como persona")
+
+class Estudiante(Persona):
+    def estudiar(self):
+        super().saludar()
+        print("Estudiando duro para no reprobar...")
+
+estudiante = Estudiante()
+estudiante.estudiar()
+```
 
 <!-- Ticket #57: Agregar ejemplo en Ruby -->
 
