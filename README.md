@@ -1298,9 +1298,11 @@ class Derivada(Base):
 Ruby:
 
 ```ruby
-class Base {}
+class Base
+end
 
-class Derivada extends Base {}
+class Derivada < Base
+end
 ```
 
 C++:
@@ -1438,7 +1440,26 @@ estudiante = Estudiante()
 estudiante.estudiar()
 ```
 
-<!-- Ticket #57: Agregar ejemplo en Ruby -->
+Ruby:
+
+```ruby
+class Persona
+  def saludar
+    puts "Saludo como persona"
+  end
+end
+
+class Estudiante < Persona
+  def estudiar
+    # En este ejemplo no usamos super, ya que en Ruby tiene otro uso: https://medium.com/rubycademy/the-super-keyword-a75b67f46f05
+    saludar()
+    puts "Estudiando duro para no reprobar"
+  end
+end
+
+estudiante = Estudiante.new()
+estudiante.estudiar()
+```
 
 <!-- Ticket #58: Agregar ejemplo en Javascript -->
 
