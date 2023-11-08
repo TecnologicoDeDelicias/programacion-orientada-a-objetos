@@ -1489,9 +1489,9 @@ estudiante.estudiar();
 
 Al instanciar objetos de clases derivadas se inicia una cadena de invocaciones a constructores en las cuales el constructor de la clase derivada, antes de realizar sus propias tareas, invoca (ya sea implícita o explícitamente) al constructor de su clase base. Similarmente, si la clase base fue derivada de otra clase, el constructor de la clase base debe invocar al constructor de la clase ubicada en el siguiente nivel superior de la jerarquía, y así sucesivamente.
 
-Veamos un ejemplo:
+Veamos algunos ejemplos.
 
-Java
+Java:
 
 ```java
 package practicas.unidad3.java;
@@ -1521,7 +1521,21 @@ class Main {
 }
 ```
 
-<!-- Ticket #61: Agregar ejemplo en Python -->
+Python:
+
+```python
+class Persona:
+    def __init__(self):
+        print("Constructor de persona")
+
+class Estudiante(Persona):
+    def __init__(self):
+        # En Python debe llamarse explícitamente el constructor de la clase base si deseamos dicho comportamiento
+        super().__init__()
+        print("Constructor de estudiante")
+
+estudiante = Estudiante()
+```
 
 <!-- Ticket #62: Agregar ejemplo en Ruby -->
 
