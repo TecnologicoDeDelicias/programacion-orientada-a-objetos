@@ -1640,7 +1640,41 @@ Cuando remueve de la memoria un objeto de una clase derivada, el recolector de b
 
 Cuando el recolector de basura invoca al destructor de un objeto de una clase derivada, ese destructor realiza su tarea y después invoca al destructor de la clase base.
 
-<!-- Ticket #65: Agregar ejemplo en C++ -->
+C++:
+
+```cpp
+#include <iostream>
+
+class Persona {
+public:
+    Persona() {
+        std::cout << "Constructor de Persona" << std::endl;
+    }
+    ~Persona() {
+        std::cout << "Destructor de Persona" << std::endl;
+    }
+};
+
+class Estudiante: public Persona {
+public:
+    Estudiante() {
+        std::cout << "Constructor de Estudiante" << std::endl;
+    }
+    ~Estudiante() {
+        std::cout << "Destructor de Estudiante" << std::endl;
+    }
+};
+
+int main() {
+    Estudiante estudiante;
+    return 0;
+    // salida:
+    // Constructor de Persona
+    // Constructor de Estudiante
+    // Destructor de Estudiante
+    // Destructor de Persona
+}
+```
 
 ### 3.6 Redefinición de métodos en clases derivadas
 
