@@ -1664,11 +1664,36 @@ class Docente < Persona
   end
 end
 
+persona = Persona.new()
+persona.saludar()
+
 docente = Docente.new()
 docente.saludar()
 ```
 
-<!-- Ticket #69: Agregar ejemplo en Javascript -->
+Javascript:
+
+```js
+class Persona {
+  saludar() {
+    console.log("Hola, soy una persona");
+  }
+}
+
+class Docente extends Persona {
+  saludar() {
+    console.log("Hola, soy un docente");
+    // Si queremos usar el método de la clase base usamos super
+    // super.saludar()
+  }
+}
+
+const persona = new Persona();
+persona.saludar();
+
+const docente = new Docente();
+docente.saludar();
+```
 
 <!-- Ticket #70: Agregar ejemplo en C++ -->
 
