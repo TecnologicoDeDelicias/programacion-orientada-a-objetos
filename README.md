@@ -1627,7 +1627,25 @@ class Main {
 }
 ```
 
-<!-- Ticket #67: Agregar ejemplo en Python -->
+Python:
+
+```python
+class Persona:
+    def saludar(self):
+        print("Hola, soy una persona")
+
+class Docente(Persona):
+    def saludar(self):
+        print("Hola, soy un docente")
+        # Si queremos usar el método de la clase base usamos super()
+        # super().saludar()
+
+persona = Persona()
+persona.saludar()
+
+docente = Docente()
+docente.saludar()
+```
 
 <!-- Ticket #68: Agregar ejemplo en Ruby -->
 
