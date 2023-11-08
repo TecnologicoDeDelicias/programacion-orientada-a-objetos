@@ -1556,7 +1556,25 @@ end
 estudiante = Estudiante.new()
 ```
 
-<!-- Ticket #63: Agregar ejemplo en Javascript -->
+Javascript:
+
+```js
+class Persona {
+  constructor() {
+    console.log("Constructor de persona");
+  }
+}
+
+class Estudiante extends Persona {
+  constructor() {
+    // La llamada a super es obligatoria
+    super();
+    console.log("Constructor de estudiante");
+  }
+}
+
+const estudiante = new Estudiante();
+```
 
 <!-- Ticket #64: Agregar ejemplo en C++ -->
 
