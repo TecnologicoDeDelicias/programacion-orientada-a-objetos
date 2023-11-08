@@ -1461,7 +1461,25 @@ estudiante = Estudiante.new()
 estudiante.estudiar()
 ```
 
-<!-- Ticket #58: Agregar ejemplo en Javascript -->
+Javascript:
+
+```js
+class Persona {
+  saludar() {
+    console.log("Saludo como persona");
+  }
+}
+
+class Estudiante extends Persona {
+  estudiar() {
+    super.saludar();
+    console.log("Estudiando duro para no reprobar...");
+  }
+}
+
+const estudiante = new Estudiante();
+estudiante.estudiar();
+```
 
 <!-- Ticket #59: Agregar ejemplo en C++ -->
 
