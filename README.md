@@ -1537,7 +1537,24 @@ class Estudiante(Persona):
 estudiante = Estudiante()
 ```
 
-<!-- Ticket #62: Agregar ejemplo en Ruby -->
+Ruby:
+
+```ruby
+class Persona
+  def initialize
+    puts "Constructor de Persona"
+  end
+end
+
+class Estudiante < Persona
+  def initialize
+    super
+    puts "Constructor de Estudiante"
+  end
+end
+
+estudiante = Estudiante.new()
+```
 
 <!-- Ticket #63: Agregar ejemplo en Javascript -->
 
