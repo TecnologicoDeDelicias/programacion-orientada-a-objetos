@@ -1647,7 +1647,26 @@ docente = Docente()
 docente.saludar()
 ```
 
-<!-- Ticket #68: Agregar ejemplo en Ruby -->
+Ruby:
+
+```ruby
+class Persona
+  def saludar
+    puts "Hola, soy una persona"
+  end
+end
+
+class Docente < Persona
+  def saludar
+    puts "Hola, soy un docente"
+    # Si queremos usar el método de la clase base usamos super
+    # super
+  end
+end
+
+docente = Docente.new()
+docente.saludar()
+```
 
 <!-- Ticket #69: Agregar ejemplo en Javascript -->
 
