@@ -1785,7 +1785,33 @@ const docente = new Docente();
 docente.saludar();
 ```
 
-<!-- Ticket #70: Agregar ejemplo en C++ -->
+C++:
+
+```cpp
+#include <iostream>
+
+class Persona {
+public:
+    void saludar() {
+        std::cout << "Hola, soy una persona" << std::endl;
+    }
+};
+
+class Docente: public Persona {
+public:
+    void saludar() {
+        std::cout << "Hola, soy un docente" << std::endl;
+        // Llamamos al método saludar de la clase base
+        // Persona::saludar();
+    }
+};
+
+int main() {
+    Docente docente;
+    docente.saludar();
+    return 0;
+}
+```
 
 ## Unidad 4: Polimorfismo
 
