@@ -1603,7 +1603,36 @@ class Estudiante extends Persona {
 const estudiante = new Estudiante();
 ```
 
-<!-- Ticket #64: Agregar ejemplo en C++ -->
+C++:
+
+```cpp
+#include <iostream>
+
+class Persona {
+public:
+    Persona() {
+        std::cout << "Constructor de Persona" << std::endl;
+    }
+};
+
+class Estudiante: public Persona {
+public:
+    Estudiante() {
+        std::cout << "Constructor de Estudiante" << std::endl;
+    }
+};
+
+int main() {
+    Persona persona;
+
+    Estudiante estudiante;
+    // Salida:
+    // Constructor de Persona
+    // Constructor de Persona
+    // Constructor de Estudiante
+    return 0;
+}
+```
 
 #### 3.5.2 Destructores en clases derivadas
 
