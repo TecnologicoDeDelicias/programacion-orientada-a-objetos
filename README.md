@@ -758,7 +758,45 @@ Ruby:
 Javascript:
 
 ```js
-// Ticket #40
+class Persona {
+  comidasFavoritas = [];
+
+  saludar() {
+    console.log("Hola, soy una persona");
+  }
+
+  static metodoEstatico() {
+    console.log("Método estático invocado");
+  }
+
+  meGusta(comida) {
+    return this.comidasFavoritas.includes(comida);
+  }
+
+  agregarComidaFavorita(comida) {
+    this.comidasFavoritas.push(comida);
+  }
+
+  #contarSecreto() {
+    return "Este es un método privado";
+  }
+}
+
+// main.js
+
+const persona = new Persona();
+
+persona.saludar();
+
+persona.agregarComidaFavorita("chocolate");
+persona.agregarComidaFavorita("pizza");
+
+console.log("Me gusta el chocolate?", persona.meGusta("chocolate"));
+console.log("Me gusta el brocoli?", persona.meGusta("brocoli"));
+
+Persona.metodoEstatico();
+// Tratar de ejecutar un método privado
+// persona.#contarSecreto()
 ```
 
 C++:
