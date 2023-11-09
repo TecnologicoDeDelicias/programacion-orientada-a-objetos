@@ -1103,8 +1103,16 @@ Ruby:
 Javascript:
 
 ```js
-// Ticket #13: Agregar ejemplo de sobrecarga de operadores en Javascript
+const sumaEnteros = 10 + 20;
+console.log(sumaEnteros);
+// salida -> 30
+
+const sumaEnteroString = 10 + "20";
+console.log(sumaEnteroString);
+// salida -> 1020
 ```
+
+También es posible redefinir los operadores utilizando librerías externas, tal como se muestra en el siguiente [enlace](https://www.delftstack.com/es/howto/javascript/javascript-operator-overloading/).
 
 En algunos lenguajes como C++, C# o Python, es posible redefinir las operaciones aritméticas de clases personalizadas.
 
