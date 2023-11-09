@@ -1488,7 +1488,7 @@ class Derivada: public Base {};
 
 En algunos lenguajes como C++ es posible que una clase derivada tenga más de una clase base directa. A esto se le conoce como **Herencia Múltiple**. En el caso de que una clase derivada sólo tenga una clase base directa se le conoce como **Herencia Simple**.
 
-![Comparativa de herencia simple y múltiple](./docs/images/herencia-simple-multiple.png)
+<img src="./docs/images/herencia-simple-multiple.png" alt="Comparativa de herencia simple y múltiple" width="100%"/>
 
 C++:
 
@@ -1501,7 +1501,7 @@ class DerivadaMultiple: public Base1, public Base2 {};
 
 Uno de los principales problemas que conlleva el uso de herencia múltiple es el la aparición de ambigüedades al momento de tener en diferentes clases base un atributo o método con el mismo nombre y firma respectivamente, ya que el compilador no puede determinar cual es el elemento que se desea utilizar para la clase derivada. Esto es conocido como el **Problema del Diamante**, por su representación gráfica.
 
-![Problema del diamante](./docs/images/problema-del-diamante.png)
+<img src="./docs/images/problema-del-diamante.png" alt="Problema del diamante" height="500px"/>
 
 En lenguajes derivados o inspirados en C y C++, tales como Java, C# y Objective-C no se permite la herencia múltiple para evitar dicha ambigüedad, sin embargo es posible emular dicha propiedad a traves de la implementación de múltiples **interfaces**.
 
