@@ -1432,6 +1432,8 @@ Cuando pensamos en las clases y objetos que forman parte de cualquier contexto, 
 
 Por ejemplo, imaginemos una aplicación que contiene elementos de interfaz gráfica, como puede ser botones, etiquetas, cuadros de texto, etc..
 
+![Elementos de la Interfaz Gráfica](./docs/images/elemetos-gui.png)
+
 Claramente podemos deducir que dichos elementos tienen diferencias notables en la manera en que se muestren al usuario, y la forma en que este interactúa con ellos. Pero de igual manera, es posible que ciertos atributos y métodos se repitan como `nombre`, `texto`, `alto` y `dibujar`, entre otros.
 
 Es por ello que es posible crear una nueva clase que contenga dichos atributos y métodos repetidos y hacer que las clases hereden de esta para eliminar dicha duplicidad.
@@ -1439,6 +1441,8 @@ Es por ello que es posible crear una nueva clase que contenga dichos atributos y
 Se le denomina **Clase Base** a la clase que contiene un mayor grado de abstracción que otra, y está es usada como punto inicial para crear otras clases. En nuestro ejemplo, sería la clase `ComponenteInterfazGrafica`.
 
 Por otro lado, a una ckase que hereda los atributos y métodos de otra es denominada como **Clase Derivada**. Siguiendo nuestro ejemplo anterior serían las clases `Boton`, `Etiqueta` y `CuadroDeTexto`.
+
+![Diagrama de Clases de GUI](./docs/images/diagrama-clases-gui.png)
 
 En Java, todas las clases heredan de manera implícita de la clase `Object`, la cual contiene algunos métodos base que todo objeto puede acceder de manera predeterminada.
 
