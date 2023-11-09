@@ -377,7 +377,37 @@ Ruby:
 Javascript:
 
 ```js
-// Ticket #30
+class Persona {
+  nombre;
+  edad;
+  vive;
+
+  saludar() {
+    console.log(`Hola, mi nombre es ${this.nombre}`);
+  }
+
+  incrementarEdad() {
+    this.edad = this.edad + 1;
+  }
+
+  morir() {
+    this.vive = false;
+  }
+}
+
+const juan = new Persona();
+console.log(juan);
+juan.saludar();
+juan.nombre = "Pedro";
+juan.edad = -10;
+juan.vive = true;
+juan.saludar();
+console.log(juan);
+juan.morir();
+console.log(juan);
+juan.saludar();
+juan.vive = true;
+console.log(juan);
 ```
 
 C++:
