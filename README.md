@@ -1562,6 +1562,14 @@ class Main {
 
 ```
 
+<!-- Ticket #90: Ejemplo en Python ->
+
+<!-- Ticket #91: Ejemplo en Ruby ->
+
+<!-- Ticket #92: Ejemplo en Javascript ->
+
+<!-- Ticket #93: Ejemplo en C++ ->
+
 ### 3.4 Referencia al objeto de la clase base
 
 Similar a lo estudiado en el tema [2.3](#23-referencia-al-objeto-actual), es posible hacer referencia a los miembros definidos en la clase base dentro de la clase derivada. Esto nos permite utilizar dichos miembros explícitamente en caso de que se requiera.
@@ -1884,9 +1892,11 @@ class Main {
     Docente docente = new Docente();
     docente.saludar();
     // --> "Hola, soy un docente"
-  }
+
 }
-```
+}
+
+````
 
 Python:
 
@@ -1906,7 +1916,7 @@ persona.saludar()
 
 docente = Docente()
 docente.saludar()
-```
+````
 
 Ruby:
 
