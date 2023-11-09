@@ -602,7 +602,28 @@ end
 Javascript:
 
 ```js
-// Ticket #37
+class Persona {
+  constructor(nombre, edad) {
+    this.nombre = nombre;
+    this.edad = edad;
+  }
+
+  esMayorQue(otraPersona) {
+    return this.edad > otraPersona.edad;
+  }
+}
+
+// Ejemplo de uso
+const juan = new Persona("Juan", 20);
+const pedro = new Persona("Pedro", 15);
+
+if (pedro.esMayorQue(juan)) {
+  console.log("Pedro es mayor que Juan");
+} else if (juan.esMayorQue(pedro)) {
+  console.log("Juan es mayor que Pedro");
+} else {
+  console.log("Ambos tienen la misma edad");
+}
 ```
 
 C++:
