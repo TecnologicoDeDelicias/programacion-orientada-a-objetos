@@ -471,7 +471,77 @@ Ruby:
 Javascript:
 
 ```js
-// Ticket #35
+"use strict";
+
+class Persona {
+  #nombre;
+  #edad;
+  #vive;
+
+  constructor(nombre, edad) {
+    this.#nombre = nombre;
+    this.#edad = edad;
+    this.#vive = true;
+    Object.seal(this);
+  }
+
+  get nombre() {
+    return this.#nombre;
+  }
+
+  set nombre(nuevoNombre) {
+    throw new Error("No se puede asignar un nuevo nombre");
+  }
+
+  get edad() {
+    return this.#edad;
+  }
+
+  get vive() {
+    return this.#vive;
+  }
+
+  set vive(vivePersona) {
+    throw new Error("No se puede establecer si vive directamente");
+  }
+
+  set edad(nuevaEdad) {
+    throw new Error("No se puede asignar edad directamente");
+  }
+
+  saludar() {
+    if (this.#vive) {
+      console.log(
+        `Hola, mi nombre es ${this.nombre} y tengo ${this.edad} años`
+      );
+    } else {
+      console.log(
+        `Hola, mi nombre fue ${this.nombre} y morí a los ${this.edad} años`
+      );
+    }
+  }
+
+  incrementarEdad() {
+    this.#edad = this.#edad + 1;
+  }
+
+  morir() {
+    this.#vive = false;
+  }
+}
+
+const juan = new Persona("Juan", 30);
+
+juan.saludar();
+juan.incrementarEdad();
+juan.saludar();
+juan.morir();
+juan.saludar();
+
+// Esta línea regresa un error ya que el objeto no admite nuevas propiedades
+// juan.otro = "Otro atributo"
+
+console.log(juan.nombre);
 ```
 
 C++:
