@@ -873,7 +873,48 @@ juan.metodo_de_clase
 Ruby:
 
 ```ruby
-# Ticket #39
+class Persona
+  def initialize(nombre = "SinNombre")
+    @nombre = nombre
+    @comida_favorita = []
+  end
+
+  def saludar
+    puts "Hola, soy #{@nombre}"
+  end
+
+  def agregar_comida_favorita(comida)
+    @comida_favorita << comida
+  end
+
+  def mostrar_comida_favorita
+    puts "#{@nombre} le gusta "
+    @comida_favorita.each do |comida|
+      puts "- #{comida}"
+    end
+  end
+end
+
+# Uso
+# Se crea instancia de Persona
+personaConNombre = Persona.new("Jacob")
+# Llama el metodo saludar
+personaConNombre.saludar
+# Llama al metodo agregar comida favorita
+personaConNombre.agregar_comida_favorita("Pastel")
+personaConNombre.agregar_comida_favorita("Helado")
+# Llama al metodo mostrar comida favorita
+personaConNombre.mostrar_comida_favorita
+
+# Se crea instancia de Persona sin nombre
+personaSinNombre = Persona.new
+# Llama el metodo saludar
+personaSinNombre.saludar
+# Llama al metodo agregar comida favorita
+personaSinNombre.agregar_comida_favorita("Elotes")
+personaSinNombre.agregar_comida_favorita("Papitas")
+# Llama al metodo mostrar comida favorita
+personaSinNombre.mostrar_comida_favorita
 ```
 
 Javascript:
