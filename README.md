@@ -1124,6 +1124,8 @@ En algunos lenguajes, como C++, los destructores se utilizan para garantizar una
 
 En lenguajes de programación gestionados por recolección de basura, como Java o Python, la gestión de la memoria se realiza automáticamente, y los programadores no necesitan preocuparse por los destructores. En su lugar, se utilizan métodos de finalización o recolección de basura para liberar recursos.
 
+C++:
+
 ```cpp
 class MiClase {
 public:
@@ -1136,6 +1138,31 @@ public:
         // Realizar tareas de limpieza aquí
     }
 };
+```
+
+Python:
+
+```python
+class Persona:
+    def __init__(self, nombre):
+        self.nombre = nombre
+        print(f"Constructor de persona {self.nombre}")
+    def __del__(self):
+        print(f"Destructor de persona {self.nombre}")
+
+# Ejemplo de uso
+john = Persona("John")
+leo = Persona("Leo")
+sam = Persona("Sam")
+
+# Si reasignamos la referencia también se manda a llamar al destructor
+
+leo = Persona("Leonardo")
+leo = None
+
+# Al finalizar el programa se manda a llamar los destructores de los objetos
+
+print("Finaliza programa")
 ```
 
 ### 2.6 Sobrecarga de métodos
@@ -1603,13 +1630,13 @@ class Main {
 
 ```
 
-<!-- Ticket #90: Ejemplo en Python ->
+<!-- Ticket #90: Ejemplo en Python -->
 
-<!-- Ticket #91: Ejemplo en Ruby ->
+<!-- Ticket #91: Ejemplo en Ruby -->
 
-<!-- Ticket #92: Ejemplo en Javascript ->
+<!-- Ticket #92: Ejemplo en Javascript -->
 
-<!-- Ticket #93: Ejemplo en C++ ->
+<!-- Ticket #93: Ejemplo en C++ -->
 
 ### 3.4 Referencia al objeto de la clase base
 
