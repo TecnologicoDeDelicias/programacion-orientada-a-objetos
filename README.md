@@ -883,7 +883,7 @@ class Persona
     puts "Hola, soy #{@nombre}"
   end
 
-  def agegar_comida_favorita(comida)
+  def agregar_comida_favorita(comida)
     @comida_favorita << comida
   end
 
