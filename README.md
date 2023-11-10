@@ -1960,11 +1960,9 @@ class Main {
     Docente docente = new Docente();
     docente.saludar();
     // --> "Hola, soy un docente"
-
+  }
 }
-}
-
-````
+```
 
 Python:
 
@@ -1984,7 +1982,7 @@ persona.saludar()
 
 docente = Docente()
 docente.saludar()
-````
+```
 
 Ruby:
 
