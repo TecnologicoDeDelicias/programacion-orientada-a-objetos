@@ -2074,7 +2074,82 @@ A continuación se muestran algunas definiciones de Polimorfismo:
 
 ### 4.2 Clases abstractas: definición, métodos abstractos, implementación de clases abstractas, modelado de clases abstractas
 
-Tema por desarrollar
+Una clase abstracta es un tipo de clase que está diseñada para solamente ser extendida de clases derivadas, y no se puede crear instancias directas de la misma.
+
+Su objetivo es crear una plantilla de las funcionalidades comunes que son requeridas para un grupo de clases, sin definir la implementación específica al momento de diseñar las interacciones entre diferentes clases.
+
+Supongamos que tenemos un sistema que nos permite trabajar con figuras geométricas, las cuales podemos calcular el perímetro y su área. Dado que los cálculos de dichas dimensiones dependen de la figura, puede ser conveniente crear una clase abstracta que defina solamente los métodos, sin necesidad de especificar alguna lógica específica. Veamos un ejemplo.
+
+Java:
+
+```java
+// Figura.java
+// Utilizamos la palabra clave abstract para definir una clase abstracta
+abstract class Figura {
+
+  // Se definen solamente la firma del método, sin agregar el cuerpo (código entre llaves)
+  abstract double calcularPerimetro();
+
+  abstract double calcularArea();
+}
+
+// ahora definimos un par de clases que extiendan de Figura
+
+// Cuadrado.java
+class Cuadrado extends Figura{
+  private double lado;
+
+  Cuadrado(double lado){
+    this.lado = lado;
+  }
+
+  @Override
+  double calcularPerimetro() {
+    return this.lado * 4;
+  }
+
+  @Override
+  double calcularArea() {
+    return this.lado * this.lado;
+  }
+}
+
+// Circulo.java
+class Circulo extends Figura {
+  private double radio;
+
+  Circulo(double radio) {
+    this.radio = radio;
+  }
+
+  @Override
+  double calcularPerimetro() {
+    return 2 * 3.14 * this.radio;
+  }
+
+  @Override
+  double calcularArea() {
+    return 3.14 * this.radio * this.radio;
+  }
+}
+
+// Programa.java
+class Programa {
+  public static void main(String[] args) {
+
+    Figura figura = new Circulo(10);
+
+    double area = figura.calcularArea();
+    double perimetro = figura.calcularPerimetro();
+
+    // la siguiente línea nos daría un error de compilación:
+    // Figura figura2 = new Figura();
+
+  }
+}
+```
+
+Cabe señalar que una clase abstracta puede contener tanto métodos abstractos como métodos concretos. Esto nos permite crear funciones comunes que se pueden heredar entre las diferentes subclases.
 
 ### 4.3 Interfaces: definición, implementación de interfaces, herencia de interfaces
 
