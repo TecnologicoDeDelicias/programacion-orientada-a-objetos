@@ -2287,7 +2287,39 @@ Cabe señalar que una variable polimórfica no necesariamente tiene que hacer re
 
 ### 4.5 Reutilización de código
 
-Tema por desarrollar
+Como se ha mencionado a lo largo de varios temas, la finalidad de la POO es simular la realidad a traves de el modelado de clases y objetos según el contexto y necesidades de las aplicaciones y/o sistemas.
+
+En el capítulo 3 se menciona la Herencia es una propiedad que nos permite la reutilización de código, sin embargo existen otros mecanismos para llevar a cabo este fin.
+
+La **Composición** es un tipo de relación entre clases que permite interactuar entre ellas sin necesidad de tener una estructura común. Por ejemplo, si modelamos la clase Automovil, podriamos tener los atributos Motor, Transmision, Frenos, etc.., los cuales a su vez pueden estar compuestos de otros objetos.
+
+Veamos un ejemplo en Java:
+
+```java
+
+public class Automovil {
+  private Motor motor;
+  private Transmision transmision;
+
+  public Automovil(Motor motor, Transmision transmision) {
+    this.motor = motor;
+    this.transmision = transmision;
+  }
+
+  public void encender() {
+    this.motor.encender();
+  }
+
+  public void acelerar() {
+    this.motor.acelerar();
+    this.transmision.cambiarVelocidad();
+  }
+}
+```
+
+Una de las ventajas de la composición es que nos permite declarar los tipos necesarios para interactuar con nuestras clases, proveyendo interfaces o tipos abstractos, y así dejar a los usuarios de nuestras clases decidir la implementación deseada.
+
+Esto es conocido como Inyección de Dependencias, la cual es promovida ampliamente por frameworks como Spring en Java.
 
 ## Unidad 5: Excepciones
 
