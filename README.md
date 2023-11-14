@@ -2234,7 +2234,56 @@ Las interfaces son un instrumento muy poderoso que nos permiten desacoplar los s
 
 ### 4.4 Variables polimórficas (plantillas): definición, uso y aplicaciones
 
-Tema por desarrollar
+Una variable polimórfica es aquella que puede recibir diferentes tipos de objetos a traves del uso de un tipo común para ellos.
+
+Por ejemplo, imaginemos que tenemos una fiesta, la cual necesitamos contratar un servicio de entretenimiento a la mitad de la fiesta, esto lo queremos simular en un programa.
+
+```java
+class Fiesta {
+  public static void main() {
+
+    // otro código
+
+
+    // esta sería la variable polimórfica ya que puede recibir diferentes tipos de Entretenimiento
+    var entretenimiento = obtenerEntretenimiento();
+
+    while(tiempoRestante > 0) {
+      entretenimiento.entretener();
+    }
+
+    // otro código
+  }
+
+  Entretenimiento obtenerEntretenimiento() {
+    // aquí podemos hacer una lógica para determinar el tipo de entretenimiento que esperamos
+
+    if (presupuesto < presupuestoMago) {
+      return new Mago();
+    }
+
+    return new Payaso();
+  }
+}
+
+interface Entretenimiento {
+  void entretener();
+}
+
+class Payaso implements Entretenimiento {
+  void entretener() {
+    // aquí puede tener lógica para contar chistes o hacer algún truco
+  }
+}
+
+class Mago implements Entretenimiento {
+  void entretener() {
+    // aquí puede tener lógica para hacer algún truco o uno que otro chiste
+  }
+}
+```
+
+Cabe señalar que una variable polimórfica no necesariamente tiene que hacer referencia a una interface, sino que puede ser una clase abstracta o una clase base concreta.
 
 ### 4.5 Reutilización de código
 
