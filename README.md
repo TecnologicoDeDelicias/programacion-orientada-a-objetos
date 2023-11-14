@@ -2153,7 +2153,84 @@ Cabe señalar que una clase abstracta puede contener tanto métodos abstractos c
 
 ### 4.3 Interfaces: definición, implementación de interfaces, herencia de interfaces
 
-Tema por desarrollar
+Una interfaz es un tipo de "clase" especial que define un conjunto de operaciones sin especificar la implementación de las mismas.
+
+Se puede decir que las interfaces son "contratos" que las clases deben cumplir, pero la implementación está sujeta a las necesidades de sus usuarios.
+
+Al igual que las clases abstractas, no es posible crear una instancia directa de una interfaz utilizando un constructor, sino que esto se hace a traves de las clases que implementan dicha interfaz. La diferencia notable entre la clase abstracta es que en una interfaz no es posible tener métodos concretos, solamente métodos abstractos.
+
+Veamos un ejemplo en Java:
+
+Java:
+
+```java
+interface ProveedorCorreoElectronico {
+  void conectar();
+  void enviar(CorreoElectronico correo);
+  void desconectar();
+}
+
+class Gmail implements ProveedorCorreoElectronico {
+
+  // atributos y constructor(es)
+
+  @Override
+  void conectar() {
+    // aquí va la lógica para conectarse a Gmail
+  }
+
+  @Override
+  void enviar(CorreoElectronico correo) {
+    // lógica para enviar correos de Gmail
+  }
+
+  @Override
+  void desconectar() {
+    // lógica para desconectar de Gmail
+  }
+}
+
+```
+
+Como se mencionó en el tema 3.2, en ciertos lenguajes no es posible contar con herencia múltiple, pero si es posible implementar varias interfaces.
+
+Java:
+
+```java
+interface Volador {
+  void volar();
+}
+
+interface Nadador {
+  void nadar()
+}
+
+class Pato implements Volador, Nadador {
+  @Override
+  void volar() {
+    System.out.println("Volando como pato");
+  }
+
+  @Override
+  void nadar() {
+    System.out.println("Nadando como pato");
+  }
+}
+
+```
+
+En el caso de las interfaces, es posible que una interfaz si herede de multiples interfaces.
+
+Java:
+
+```java
+interface Anfibio extends Acuatico, Terrestre {
+  // métodos de Anfibio
+}
+
+```
+
+Las interfaces son un instrumento muy poderoso que nos permiten desacoplar los sistemas de su implementación y poder cambiar los componentes de manera fácil y transparente, sin necesidad de tener que re-escribir nuestros programas.
 
 ### 4.4 Variables polimórficas (plantillas): definición, uso y aplicaciones
 
