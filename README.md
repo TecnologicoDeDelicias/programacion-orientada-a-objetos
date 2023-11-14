@@ -2066,7 +2066,11 @@ Esta unidad trata una de las características fundamentales de la programación 
 
 ### 4.1 Definición
 
-Tema por desarrollar
+A continuación se muestran algunas definiciones de Polimorfismo:
+
+- Conseguir que los métodos de una clase base y sus redefiniciones en sus derivadas se comporten adecuadamente, independientemente del tipo del medio realmente empleado para acceder a los mismos (puntero o referencia a una clase).
+- Se refiere a la propiedad por la que es posible enviar mensajes sintácticamente iguales a objetos de tipos distintos. Aunque el mensaje sea el mismo, diferentes objetos pueden responder a él de manera única y específica. Esta característica permite que, sin alterar ni tocar el código existente, se puedan incorporar nuevos comportamientos y funciones (es decir la interfaz sintáctica se mantiene inalterada pero cambia el comportamiento en función de qué objeto estamos usando en cada momento). El único requisito es que los objetos deben ser capaces de responder al mensaje que se les envía, garantizando así una flexibilidad y extensibilidad en el diseño del software.
+- Es una relajación del sistema de tipos, de tal manera que una referencia a una clase (atributo, parámetro o declaración local o elemento de un vector) acepta direcciones de objetos de dicha clase y de sus clases derivadas (hijas, nietas, ...).
 
 ### 4.2 Clases abstractas: definición, métodos abstractos, implementación de clases abstractas, modelado de clases abstractas
 
