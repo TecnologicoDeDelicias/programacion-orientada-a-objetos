@@ -1629,9 +1629,42 @@ class Main {
 }
 
 ```
+Python:
 
-<!-- Ticket #90: Ejemplo en Python -->
+```Python
 
+Archivo personas.py
+class Persona:
+  def saludar(self)
+    print(f"Hola, soy una persona")
+
+class Estudiante(Persona):
+  def estudiar(self)
+    print(f"Estudiando")
+
+class Docente(Persona):
+  def dar_clases(self)
+    print(f"dando clases")
+
+Archivo main.py
+from personas import Persona, Estudiante, Docente
+if __name__ == "__main__":
+  persona = Persona()
+  estudiante = Estudiante()
+  docente = Docente()
+
+  persona.saludar()
+  estudiante.saludar()
+  docente.saludar()
+
+  estudiante.estudiar()
+  docente.dar_clase()
+
+  print(f"soy de la clase {persona.__class__.__name__}")
+  print(f"soy de la clase {estudiante.__class__.__name__}")
+  print(f"soy de la clase {docente.__class__.__name__}")
+
+```
 <!-- Ticket #91: Ejemplo en Ruby -->
 
 <!-- Ticket #92: Ejemplo en Javascript -->
