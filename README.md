@@ -2378,7 +2378,48 @@ public class PruebaDivisionPorCero {
 
 ### 5.3 Propagación de excepciones
 
-Tema por desarrollar
+Si una excepción no es manejada dentro de algún bloque o método que la generó, ésta se propagará al método que la llamó y así hasta llegar a un método o bloque que la maneje, o en su defecto, interrumpir el programa principal.
+
+Veamos un ejemplo en Java:
+
+```java
+public class PruebaPropagacionExcepciones {
+  public static void main(String [] args) {
+    System.out.println("Ejecutando método a()");
+    a();
+    System.out.println("Finaliza programa");
+  }
+
+  public static void a() {
+    System.out.println("Ejecutando método b()");
+    b();
+  }
+
+  public static void b() {
+    System.out.println("Ejecutando método c()");
+    c();
+  }
+
+  public static void c() {
+    int x = 10 / 0;
+  }
+}
+```
+
+Si ejecutamos el programa, veremos una salida similar a la siguiente:
+
+```
+Ejecutando método a()
+Ejecutando método b()
+Ejecutando método c()
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+        at practicas.unidad5.java.PruebaPropagacionExcepciones.c(PruebaPropagacionExcepciones.java:29)
+        at practicas.unidad5.java.PruebaPropagacionExcepciones.b(PruebaPropagacionExcepciones.java:25)
+        at practicas.unidad5.java.PruebaPropagacionExcepciones.a(PruebaPropagacionExcepciones.java:20)
+        at practicas.unidad5.java.PruebaPropagacionExcepciones.main(PruebaPropagacionExcepciones.java:14)
+```
+
+Si observamos la salida anterior, la línea "Finaliza Programa" no se imprime, ya que el programa fue interrumpido por la excepción de dividir por cero. También podemos observar que se imprime la pila de llamadas o StackTrace.
 
 ### 5.4 Gestión de excepciones: manejo de excepciones, lanzamiento de excepciones
 
