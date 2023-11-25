@@ -2516,7 +2516,38 @@ Fin del método main
 
 ### 5.5 Creación y manejo de excepciones definidas por el usuario
 
-Tema por desarrollar
+Es posible crear excepciones personalizadas que reflejen una mejor semántica dentro de nuestras aplicaciones.
+
+Por ejemplo en Java, si extendemos de cualquier clase que herede directa o indirectamente de Exception (o RuntimeException), podremos agregar nuevos elementos o lógica asociada a este tipo de excepción.
+
+```java
+public class EdadInvalidaException extends IllegalArgumentException {
+
+  public EdadInvalidaException(int edad) {
+    super("Lo siento, tu edad no es válida: " + edad);
+  }
+}
+
+public class PruebaExcepcionPersonalizada {
+  public static void main(String [] args) {
+    int edad = 10;
+    try {
+      if (edad < 18) {
+        throw new EdadInvalidaException(edad);
+      }
+      System.out.println("Tu edad si es válida");
+    } catch(Exception e) {
+      System.out.println(e.getMessage());
+    } finally {
+      System.out.println("Este bloque siempre se ejecuta");
+    }
+
+    System.out.println("Fin del método main");
+  }
+}
+```
+
+Aparentemente el código no ha cambiado mucho, pero ahora tenemos una excepción más legible que nos permite identificar claramente cual es la regla de negocio que no se ha cumplido, lo cual nos ayuda a poder hacer una depuración de los errores más fácilmente.
 
 ## Unidad 6: Flujos y archivos
 
