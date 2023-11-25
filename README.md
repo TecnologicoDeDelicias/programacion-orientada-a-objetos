@@ -2341,7 +2341,40 @@ El correcto manejo de excepciones nos permite crear programas más robustos, que
 
 ### 5.2 Tipos de excepciones
 
-Tema por desarrollar
+Dependiendo del lenguaje de programación que estemos usando, el tipo de excepciones puede variar.
+
+Generalmente se pueden clasificar en 2 tipos:
+
+- Recuperables
+- No recuperables
+
+Las excepciones recuperables son aquellas como su nombre lo indica, es posible proveer un manejo para evitar su propagación y la finalización abrupta de un programa.
+
+Por otra parte, las excepciones no recuperables (o errores) son situaciones de las cuales no es posible proveer un mecanismo de recuperación y obedece a situaciones realmente graves (Falta de memoria, desbordamiento de pila, etc...)
+
+En Java, es posible encontrar las siguientes clasificaciones o tipos:
+
+- Excepciones Checadas
+- Excepciones No Checadas
+
+Una excepción checada es aquella que necesita ser envuelta entre un bloque `try`/`catch` o utilizar la palabra reservada `throws` en la firma del método. Algunos ejemplos de este tipo son: `IOException`, `DataFormatException`, `SQLException`, las cuales heredan directamente de la clase `Exception`.
+
+Una excepción no checada es aquella que no requiere lo anterior y pertenece a una subclase de `RuntimeException`, tales como `NullPointerException`, `IllegalArgumentException` o `ArithmeticException`.
+
+Veamos un ejemplo simple de una excepción no checada:
+
+Java:
+
+```java
+public class PruebaDivisionPorCero {
+  public static void main(String [] args) {
+    int x = 10;
+    int divisor = 0;
+
+    int resultado = x / divisor; // La siguiente línea nos arrojará un ArithmeticException
+  }
+}
+```
 
 ### 5.3 Propagación de excepciones
 
