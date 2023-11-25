@@ -2327,7 +2327,17 @@ En esta unidad se tratan situaciones excepcionales que se presentan en tiempo de
 
 ### 5.1 Definición
 
-Tema por desarrollar
+Una excepción es la indicación de un problema que ocurre durante la ejecución de un programa.
+
+El nombre "excepción" viene del hecho de que, aunque puede ocurrir un problema, éste ocurre con poca frecuencia; si la "regla" es que una instrucción generalmente se ejecuta en forma correcta, entonces la "excepción a la regla" es cuando ocurre un problema.
+
+Algunos ejemplos que podemos mencionar serían:
+
+- Error al abrir un archivo por diversos motivos (archivo no existe, archivo muy grande, etc..)
+- Error al conectarnos a algún recurso como una Base de datos, un sitio web o algún tipo de servicio.
+- Datos incorrectos no procesados o validados antes de ser usados
+
+El correcto manejo de excepciones nos permite crear programas más robustos, que permiten recuperarse de dichas situaciones excepcionales, proveyendo a los usuarios mensajes de error más amigables que no expongan información sensible al exterior.
 
 ### 5.2 Tipos de excepciones
 
