@@ -2423,7 +2423,96 @@ Si observamos la salida anterior, la línea "Finaliza Programa" no se imprime, y
 
 ### 5.4 Gestión de excepciones: manejo de excepciones, lanzamiento de excepciones
 
-Tema por desarrollar
+Los lenguajes de programación proveen diferentes mecanismos para el manejo de excepciones. Por lo general, se utilizan los bloques try/catch para indicar que cierta instrucción está siendo manejada y se provee un bloque de recuperación.
+
+Continuando con el ejemplo anterior, vamos a proveer un bloque try/catch para manejar la división por cero:
+
+```java
+public class PruebaManejoExcepciones {
+  public static void main(String [] args) {
+    System.out.println("Ejecutando método a()");
+    a();
+    System.out.println("Finaliza programa");
+  }
+
+  public static void a() {
+    System.out.println("Ejecutando método b()");
+    b();
+  }
+
+  public static void b() {
+    System.out.println("Ejecutando método c()");
+    c();
+  }
+
+  public static void c() {
+    try {
+      int x = 10 / 0;
+    } catch (ArithmeticException ex) {
+      System.out.println("Ups hubo un error al dividir por cero");
+    }
+
+  }
+}
+```
+
+Ahora la salida que obtenemos cambia, y nos muestra algo similar a lo siguiente:
+
+```
+Ejecutando método a()
+Ejecutando método b()
+Ejecutando método c()
+Ups hubo un error al dividir por cero
+Finaliza programa
+```
+
+Observe que dentro del bloque catch tenemos que definir el tipo de excepción que queremos manejar, y agregamos un identificador (en este caso `ex`), el cual nos permitirá acceder al objeto de la excepción lanzada y consultar alguna información a traves de sus métodos.
+
+Algunos métodos comunes son:
+
+- `printStackTrace()`: Nos permite imprimir la pila de llamadas de la excepción
+- `getMessage()`: Nos permite obtener solamente el mensaje de la excepción
+- `getCause()`: Obtiene la causa de la excepción, en caso de que haya sido relanzada por otra excepción.
+
+También es posible lanzar explícitamente excepciones, dentro de nuestro código, si ciertas condiciones no se cumplen.
+
+Ejemplo:
+
+```java
+public class PruebaLanzarExcepciones {
+  public static void main(String [] args) {
+    int edad = 10;
+    try {
+      if (edad < 18) {
+        throw new IllegalArgumentException("Lo siento, tu edad no es válida");
+      }
+      System.out.println("Tu edad si es válida");
+    } catch(Exception e) {
+      System.out.println(e.getMessage());
+    } finally {
+      System.out.println("Este bloque siempre se ejecuta");
+    }
+
+    System.out.println("Fin del método main");
+  }
+}
+```
+
+Si ejecutamos el código nos arrojará una salida similar a la siguiente:
+
+```
+Lo siento, tu edad no es válida
+Este bloque siempre se ejecuta
+Fin del método main
+```
+
+Ahora si cambiamos la variable edad con un valor de 18 o mayor, nos arrojaría algo como lo siguiente:
+
+```
+Tu edad si es válida
+Este bloque siempre se ejecuta
+Fin del método main
+```
 
 ### 5.5 Creación y manejo de excepciones definidas por el usuario
 
