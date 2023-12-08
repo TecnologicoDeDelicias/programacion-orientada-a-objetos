@@ -2546,6 +2546,25 @@ public class PruebaExcepcionPersonalizada {
   }
 }
 ```
+```python
+class ErrorPersonalizado(Exception):
+    def __init__(self, mensaje):
+        self.mensaje = mensaje
+        super().__init__(mensaje)
+
+def dividir(a, b):
+    if b == 0:
+        raise ErrorPersonalizado("No se puede dividir por cero.")
+    return a / b
+
+try:
+    resultado = dividir(10, 0)
+    print("Resultado:", resultado)
+except ErrorPersonalizado as e:
+    print(f"Error personalizado: {e.mensaje}")
+except Exception as e:
+    print(f"Error no manejado: {str(e)}")
+```
 
 Aparentemente el código no ha cambiado mucho, pero ahora tenemos una excepción más legible que nos permite identificar claramente cual es la regla de negocio que no se ha cumplido, lo cual nos ayuda a poder hacer una depuración de los errores más fácilmente.
 
